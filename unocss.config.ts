@@ -17,14 +17,20 @@ export default defineConfig({
     }),
     presetWebFonts({
       fonts: {
-        sans: 'Lato',
-        serif: 'Old Standard TT',
+        sans: 'Inter',
       },
     }),
   ],
   theme: {
     colors: {
-      dark: '#383838',
+      jo_green: '#82887C',
+      jo_dark: '#403D39',
+      jo_beige: '#E1DDD6',
+      jo_brown: '#884125',
+      jo_grey: '#C1BDB9',
+    },
+    fontFamily: {
+      display: ['CMGeom', 'sans-serif'],
     },
   },
 })
