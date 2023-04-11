@@ -14,8 +14,9 @@ useHead({
 </script>
 
 <template>
-  <div class="m-4 p-4 bg-jo_grey rounded-xl">
+  <div class="m-4 p-4 bg-jo_grey rounded-xl gap-y-32 grid">
     <SectionHero />
+    <SectionAbout />
   </div>
 </template>
 

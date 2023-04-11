@@ -12,6 +12,7 @@ declare module '@vue/runtime-core' {
     EbzPanorama: typeof import('./src/components/panorama/EbzPanorama.vue')['default']
     EbzPanorama2: typeof import('./src/components/EbzPanorama.vue')['default']
     EbzPanoramaSlide: typeof import('./src/components/panorama/EbzPanoramaSlide.vue')['default']
+    JoAccordeon: typeof import('./src/components/JoAccordeon.vue')['default']
     JoBerlinTimer: typeof import('./src/components/JoBerlinTimer.vue')['default']
     JoDivider: typeof import('./src/components/JoDivider.vue')['default']
     JoHero: typeof import('./src/components/JoHero.vue')['default']
@@ -21,6 +22,7 @@ declare module '@vue/runtime-core' {
     JoNavigation: typeof import('./src/components/JoNavigation.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    SectionAbout: typeof import('./src/components/SectionAbout.vue')['default']
     SectionHero: typeof import('./src/components/SectionHero.vue')['default']
   }
 }
