@@ -24,6 +24,7 @@
     "@vitejs/plugin-vue": "^4.0.0",
     "@vue-macros/volar": "^0.8.4",
     "@vueuse/head": "^1.1.23",
+    "critters": "^0.0.16",
     "eslint": "^8.35.0",
     "jsdom": "^21.1.0",
     "lint-staged": "^13.1.2",
