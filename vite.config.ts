@@ -54,4 +54,8 @@ export default defineConfig({
       include: [path.resolve(__dirname, 'locales/**')],
     }),
   ],
+  ssr: {
+    // SSG Vue-i18n workaround
+    noExternal: [/vue-i18n/],
+  },
 })
