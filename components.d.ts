@@ -12,7 +12,15 @@ declare module '@vue/runtime-core' {
     EbzPanorama: typeof import('./src/components/panorama/EbzPanorama.vue')['default']
     EbzPanorama2: typeof import('./src/components/EbzPanorama.vue')['default']
     EbzPanoramaSlide: typeof import('./src/components/panorama/EbzPanoramaSlide.vue')['default']
+    JoBerlinTimer: typeof import('./src/components/JoBerlinTimer.vue')['default']
+    JoDivider: typeof import('./src/components/JoDivider.vue')['default']
+    JoHero: typeof import('./src/components/JoHero.vue')['default']
+    JoImprint: typeof import('./src/components/JoImprint/JoImprint.vue')['default']
+    JoImprintContent: typeof import('./src/components/JoImprint/JoImprintContent.vue')['default']
+    JoImprintPrivacy: typeof import('./src/components/JoImprint/JoImprintPrivacy.vue')['default']
+    JoNavigation: typeof import('./src/components/JoNavigation.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    SectionHero: typeof import('./src/components/SectionHero.vue')['default']
   }
 }

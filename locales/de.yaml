@@ -1,5 +1,24 @@
 meta:
   title: Jascha Ostholt
   description: Servus
-index:
-  header: Hello World!
+nav:
+  - text: about.
+    id: about
+  - text: recent projects.
+    id: recent_projects
+  - text: contact.
+    id: contact
+imprint:
+  imprint
+hero:
+  h1: Jascha Ostholt.
+  subtitle:
+    profession:
+      web developer
+    location:
+      - remote
+      - '& in Berlin'
+    copyright:
+      © 2023
+timer:
+  'Berlin:'

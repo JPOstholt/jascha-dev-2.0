@@ -8,7 +8,9 @@ import {
 import transformerDirectives from '@unocss/transformer-directives'
 
 export default defineConfig({
-  shortcuts: [],
+  shortcuts: {
+    jo_border: 'border-b border-jo_dark',
+  },
   presets: [
     presetUno(),
     presetAttributify(),

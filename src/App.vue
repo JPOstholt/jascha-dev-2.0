@@ -14,9 +14,9 @@ useHead({
 </script>
 
 <template>
-  <main class="text-9xl text-jo_brown font-sans">
-    {{ $t('index.header') }}
-  </main>
+  <div class="m-4 p-4 bg-jo_grey rounded-xl">
+    <SectionHero />
+  </div>
 </template>
 
 <style>
