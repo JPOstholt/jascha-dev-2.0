@@ -18,3 +18,10 @@ useHead({
     {{ $t('index.header') }}
   </main>
 </template>
+
+<style>
+body {
+  @apply bg-jo_beige;
+  @apply text-jo_dark;
+}
+</style>

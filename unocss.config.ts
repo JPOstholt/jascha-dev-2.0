@@ -5,6 +5,7 @@ import {
   presetUno,
   presetWebFonts,
 } from 'unocss'
+import transformerDirectives from '@unocss/transformer-directives'
 
 export default defineConfig({
   shortcuts: [],
@@ -20,6 +21,9 @@ export default defineConfig({
         sans: 'Inter',
       },
     }),
+  ],
+  transformers: [
+    transformerDirectives(),
   ],
   theme: {
     colors: {
