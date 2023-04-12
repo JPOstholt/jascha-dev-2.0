@@ -1,7 +1,7 @@
 <template>
   <section :id="$t('nav[1].id')">
     <header
-      class="w-full jo_heading_font"
+      class="w-full jo_text_h1"
     >
       <h2
         class=" jo_border pb-1

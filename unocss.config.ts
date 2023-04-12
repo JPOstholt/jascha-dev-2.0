@@ -10,11 +10,11 @@ import transformerDirectives from '@unocss/transformer-directives'
 export default defineConfig({
   shortcuts: {
     jo_border: 'border-b border-jo_dark lg:border-b-2',
-    jo_heading_font: 'text-7xl font-display lg:text-8xl xl:text-9xl',
     jo_container: 'max-w-screen-xl mx-auto !2xl:p-0',
     jo_text_base: 'text-base lg:text-xl xl:text-2xl',
     jo_text_sm: 'text-sm lg:text-base xl:text-lg',
     jo_text_lg: 'text-base lg:text-2xl xl:text-3xl',
+    jo_text_h1: 'text-7xl font-display lg:text-8xl xl:text-9xl',
     jo_text_h2: 'text-lg font-display lg:text-2xl xl:text-3xl',
   },
   presets: [
