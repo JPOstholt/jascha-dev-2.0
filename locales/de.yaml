@@ -83,3 +83,10 @@ contact:
       title: LinkedIn
       linkTitle: Visit my profile ⬀
       link: https://www.linkedin.com/in/jascha-ostholt/
+footer:
+  dev:
+    - 'Design & Development: '
+    - Jascha Ostholt
+  font:
+    - 'Font: '
+    - Geom by Cedrik Müller

@@ -22,9 +22,10 @@ declare module '@vue/runtime-core' {
     JoNavigation: typeof import('./src/components/JoNavigation.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
-    SectionAbout: typeof import('./src/components/SectionAbout.vue')['default']
-    SectionContact: typeof import('./src/components/SectionContact.vue')['default']
-    SectionHero: typeof import('./src/components/SectionHero.vue')['default']
-    SectionProjects: typeof import('./src/components/SectionProjects.vue')['default']
+    SectionAbout: typeof import('./src/components/section/SectionAbout.vue')['default']
+    SectionContact: typeof import('./src/components/section/SectionContact.vue')['default']
+    SectionFooter: typeof import('./src/components/section/SectionFooter.vue')['default']
+    SectionHero: typeof import('./src/components/section/SectionHero.vue')['default']
+    SectionProjects: typeof import('./src/components/section/SectionProjects.vue')['default']
   }
 }

@@ -14,12 +14,13 @@ useHead({
 </script>
 
 <template>
-  <div class="m-4 p-4 bg-jo_grey rounded-xl gap-y-32 grid">
+  <main class="m-4 p-4 bg-jo_grey rounded-xl gap-y-32 grid">
     <SectionHero />
     <SectionAbout />
     <SectionProjects />
     <SectionContact />
-  </div>
+  </main>
+  <SectionFooter />
 </template>
 
 <style>
