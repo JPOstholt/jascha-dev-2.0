@@ -6,7 +6,7 @@
         xl:mb-80"
     >
       <ul class="flex-shrink-0">
-        <li v-for="item in $tm('nav')" :key="`nav_${$rt(item.id)}`" class="leading-snug">
+        <li v-for="item in $tm('nav')" :key="`nav_${$rt(item.id)}`">
           <a
             :href="`#${$rt(item.id)}`"
             class="jo_text_base underline hover:no-underline"
