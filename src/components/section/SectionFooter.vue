@@ -2,7 +2,7 @@
   <footer class="mx-4 pb-4 text-sm">
     <p
       v-for="info, index in $tm('footer')"
-      :key="`footer_${index}`"
+      :key="`footer_${String(index)}`"
     >
       <span class="font-semibold">
         {{ $rt(info[0]) }}
