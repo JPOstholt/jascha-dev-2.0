@@ -61,12 +61,14 @@ onMounted(() => {
 <template>
   <li>
     <div class="jo_border w-full flex justify-between font-display px-4" @click="toggleOpen()">
-      <h3><slot name="title" /></h3>
+      <h3 class="text-lg">
+        <slot name="title" />
+      </h3>
       <button ref="arrow">
         ↓
       </button>
     </div>
-    <div ref="content" class="px-4 text-sm overflow-hidden">
+    <div ref="content" class="px-4 overflow-hidden">
       <div class="mt-2">
         <slot />
       </div>

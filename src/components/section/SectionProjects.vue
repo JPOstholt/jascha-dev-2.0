@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section :id="$t('nav[1].id')">
     <h2 class="w-full text-7xl font-display pb-2">
       <span class="block jo_border">
         {{ $t('projects.title[0]') }}
