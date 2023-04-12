@@ -3,11 +3,11 @@ import anime from 'animejs'
 const EASING = 'easeInOutQuad'
 const DURATION = 400
 
+const arrow = ref(null)
+
 const content = ref(null)
 const { height } = useElementSize(content)
 const contentHeight = ref(0)
-
-const arrow = ref(null)
 
 const open = () => {
   anime({
@@ -61,7 +61,7 @@ onMounted(() => {
 <template>
   <li>
     <div class="jo_border w-full flex justify-between font-display px-4" @click="toggleOpen()">
-      <h3>Stack</h3>
+      <h3><slot name="title" /></h3>
       <button ref="arrow">
         ↓
       </button>

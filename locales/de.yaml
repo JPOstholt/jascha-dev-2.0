@@ -22,3 +22,34 @@ hero:
       © 2023
 timer:
   'Berlin:'
+about:
+  title: About.
+  summary1:
+    - I am a
+    - passionate web dev
+    - with
+    - 6+ years of experience.
+  summary2:
+    - I balance
+    - pragmatism
+    - with
+    - attention to detail
+    - and writing
+    - clean and future proof code.
+  details:
+    stack:
+      title: Stack
+      description: Nuxt, Vue, Typescript, Tailwind, Anime.js
+    languages:
+      title: Languages
+      description: German, English
+    education:
+      title: Education
+      description:
+        - year: 2022
+          degree: Certified Scrum Product Owner
+        - year: 2019
+          degree: B.Sc. Applied Computer Science
+    downloads:
+      title: Downloads
+      description: CV (PDF) ⇩

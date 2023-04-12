@@ -1,35 +1,66 @@
 <template>
   <section class="grid gap-y-12">
     <h2 class="w-full jo_border text-7xl font-display text-center pb-2">
-      About.
+      {{ $t('about.title') }}
     </h2>
     <p class="max-w-sm">
-      I am a
+      {{ $t('about.summary1[0]') }}
       <span class="font-display text-jo_brown">
-        passionate web dev
+        {{ $t('about.summary1[1]') }}
       </span>
-      with
+      {{ $t('about.summary1[2]') }}
       <span class="italic">
-        6+ years of experience.
+        {{ $t('about.summary1[3]') }}
       </span>
     </p>
     <p class="max-w-sm 2xl:max-w-md text-right">
-      I balance
+      {{ $t('about.summary2[0]') }}
       <span class="font-display text-jo_brown">
-        pragmatism
+        {{ $t('about.summary2[1]') }}
       </span>
-      with
+      {{ $t('about.summary2[2]') }}
       <span class="font-display text-jo_brown">
-        attention to detail
+        {{ $t('about.summary2[3]') }}
       </span>
-      and writing
+      {{ $t('about.summary2[4]') }}
       <span class="italic">
-        clean and future proof code.
+        {{ $t('about.summary2[5]') }}
       </span>
     </p>
     <ul class="grid gap-y-2">
-      <JoAccordeon v-for="i in [0, 1, 2, 3]" :key="i">
-        <p>  contentHeight.value = height.value</p>
+      <JoAccordeon
+        v-for="detail in $tm('about.details')"
+        :key="`about_${$rt(detail.title)}`"
+      >
+        <template #title>
+          {{ $rt(detail.title) }}
+        </template>
+        <template #default>
+          <template v-if="$rt(detail.title) === 'Education'">
+            <tr
+              v-for="education in detail.description"
+              :key="`about_education_${$rt(education.year)}`"
+            >
+              <td class="min-w-16">
+                {{ $rt(education.year) }}
+              </td>
+              <td>
+                {{ $rt(education.degree) }}
+              </td>
+            </tr>
+          </template>
+          <a
+            v-else-if="$rt(detail.title) === 'Downloads'"
+            href="/downloads/CV_JaschaOstholt.pdf"
+            target="_blank"
+            class="underline hover:no-underline"
+          >
+            {{ $rt(detail.description) }}
+          </a>
+          <p v-else>
+            {{ $rt(detail.description) }}
+          </p>
+        </template>
       </JoAccordeon>
     </ul>
   </section>

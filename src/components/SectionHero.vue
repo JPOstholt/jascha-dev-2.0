@@ -1,17 +1,13 @@
-<script lang="ts" setup>
-const { rt, tm } = useI18n()
-</script>
-
 <template>
   <div class="flex flex-col justify-between">
     <nav class="flex items-start mb-48">
       <ul class="flex-shrink-0">
-        <li v-for="item in tm('nav')" :key="`nav_${rt(item.id)}`" class="leading-snug">
+        <li v-for="item in $tm('nav')" :key="`nav_${$rt(item.id)}`" class="leading-snug">
           <a
-            :href="`#${rt(item.id)}`"
+            :href="`#${$rt(item.id)}`"
             class="underline"
           >
-            {{ rt(item.text) }}
+            {{ $rt(item.text) }}
           </a>
         </li>
       </ul>
