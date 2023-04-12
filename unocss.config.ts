@@ -10,6 +10,7 @@ import transformerDirectives from '@unocss/transformer-directives'
 export default defineConfig({
   shortcuts: {
     jo_border: 'border-b border-jo_dark lg:border-b-2',
+    jo_heading_font: 'text-7xl font-display lg:text-8xl xl:text-9xl',
   },
   presets: [
     presetUno(),

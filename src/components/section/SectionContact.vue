@@ -1,6 +1,8 @@
 <template>
   <section :id="$t('nav[2].id')">
-    <h2 class="w-full jo_border text-7xl font-display text-center pb-1">
+    <h2
+      class="w-full jo_border jo_heading_font text-center pb-1"
+    >
       {{ $t('contact.title') }}
     </h2>
     <div class="w-full flex justify-end mt-2">
