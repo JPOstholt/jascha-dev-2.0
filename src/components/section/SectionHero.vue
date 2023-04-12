@@ -9,7 +9,7 @@
         <li v-for="item in $tm('nav')" :key="`nav_${$rt(item.id)}`" class="leading-snug">
           <a
             :href="`#${$rt(item.id)}`"
-            class="jo_text_base underline"
+            class="jo_text_base underline hover:no-underline"
           >
             {{ $rt(item.text) }}
           </a>
