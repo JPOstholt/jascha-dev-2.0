@@ -9,7 +9,7 @@ onClickOutside(imprintModal, () => imprintOpen.value = false)
 
 <template>
   <aside class="w-full flex justify-end relative">
-    <button class="text-sm inline-block underline hover:no-underline" @click="imprintOpen = !imprintOpen">
+    <button class="jo_text_sm inline-block underline hover:no-underline" @click="imprintOpen = !imprintOpen">
       {{ $t('imprint') }}
     </button>
     <div

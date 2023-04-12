@@ -1,5 +1,5 @@
 <template>
-  <footer class="mx-4 pb-4 text-sm">
+  <footer class="mx-4 pb-4 jo_text_sm">
     <p
       v-for="info, index in $tm('footer')"
       :key="`footer_${String(index)}`"

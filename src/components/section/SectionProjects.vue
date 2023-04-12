@@ -25,8 +25,8 @@
     </header>
     <div
       class="text-center mt-16 grid gap-y-16
-      lg:mt-20 lg:gap-y-20
-      xl:mt-24 lg:gap-y-24"
+      lg:mt-32 lg:gap-y-20
+      lg:gap-y-24"
     >
       <a
         v-for="project in $tm('projects.projects')"

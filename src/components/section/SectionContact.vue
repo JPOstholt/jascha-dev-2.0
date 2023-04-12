@@ -8,7 +8,10 @@
     <div class="w-full flex justify-end mt-2">
       <JoBerlinTimer />
     </div>
-    <p class="my-16">
+    <p
+      class="jo_container jo_text_lg
+        my-16 lg:my-32 xl:my-64"
+    >
       {{ $t('contact.summary1[0]') }}
       <span class="font-display text-jo_brown">
         {{ $t('contact.summary1[1]') }}
@@ -21,18 +24,30 @@
         {{ $t('contact.summary2') }}
       </span>
     </p>
-    <div class="grid gap-y-8">
+    <div
+      class="grid gap-y-8
+        lg:gap-y-16 lg:mb-16
+        xl:gap-y-32 xl:mb-32"
+    >
       <section
         v-for="detail in $tm('contact.details')"
         :key="`contact_${$rt(detail.title)}`"
       >
-        <h3 class="jo_border px-4 font-display text-lg">
-          {{ $rt(detail.title) }}
+        <h3
+          class="jo_border jo_text_h2
+            lg:pb-1 lg:mb-1
+            xl:mb-2"
+        >
+          <span
+            class="block jo_container px-4"
+          >
+            {{ $rt(detail.title) }}
+          </span>
         </h3>
         <a
           :href="$rt(detail.link)"
           target="_blank"
-          class="px-4 underline hover:no-underline"
+          class="block jo_container px-4 underline hover:no-underline jo_text_base"
         >
           {{ $rt(detail.linkTitle) }}
         </a>
