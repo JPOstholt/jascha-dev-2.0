@@ -16,7 +16,7 @@ useHead({
 <template>
   <div class="max-w-[2200px] mx-auto">
     <main
-      class="m-4 p-4 bg-jo_grey rounded-xl gap-y-32 grid
+      class="m-4 p-4 bg-jo_grey/60 rounded-xl gap-y-32 grid
         lg:gap-y-32
         xl:gap-y-64
         2xl:gap-y-96"
