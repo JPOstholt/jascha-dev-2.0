@@ -17,6 +17,7 @@ useHead({
   <div class="m-4 p-4 bg-jo_grey rounded-xl gap-y-32 grid">
     <SectionHero />
     <SectionAbout />
+    <SectionProjects />
   </div>
 </template>
 

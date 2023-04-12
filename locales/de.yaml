@@ -53,3 +53,16 @@ about:
     downloads:
       title: Downloads
       description: CV (PDF) ⇩
+projects:
+  title:
+    - Recent-
+    - Projects.
+  projects:
+    - title: elvah
+      link: http://www.elvah.de
+    - title: kreait
+      link: http://www.kreait.com
+    - title: Dominik Galleya
+      link: http://dominikgalleya.at
+    - title: olaph
+      link: http://olaph.io
