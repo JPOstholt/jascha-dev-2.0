@@ -18,6 +18,7 @@ useHead({
     <SectionHero />
     <SectionAbout />
     <SectionProjects />
+    <SectionContact />
   </div>
 </template>
 

@@ -66,3 +66,20 @@ projects:
       link: http://dominikgalleya.at
     - title: olaph
       link: http://olaph.io
+contact:
+  title: Contact.
+  summary1:
+    - I am currently looking for
+    - freelance work
+    - in the
+    - Berlin timezone.
+  summary2: Feel free to reach out also if you just want to have a chat.
+  details:
+    email:
+      title: Email
+      linkTitle: Get in touch
+      link: 'mailto:jascha.ostholt+freelance{''@''}gmail.com'
+    linkedIn:
+      title: LinkedIn
+      linkTitle: Visit my profile ⬀
+      link: https://www.linkedin.com/in/jascha-ostholt/
