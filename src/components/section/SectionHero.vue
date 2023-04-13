@@ -9,7 +9,8 @@
         <li v-for="item in $tm('nav')" :key="`nav_${$rt(item.id)}`">
           <a
             :href="`#${$rt(item.id)}`"
-            class="jo_text_base underline hover:no-underline"
+            class="jo_text_base underline hover:no-underline
+              font-medium lg:font-normal"
           >
             {{ $rt(item.text) }}
           </a>
@@ -25,6 +26,7 @@
       </h1>
       <div
         class="jo_border jo_text_base flex justify-between gap-x-24 leading-snug mt-1
+          font-medium lg:font-normal
           h-24 lg:h-28 xl:h-36"
       >
         <p>{{ $t('hero.subtitle.profession') }}</p>
