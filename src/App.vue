@@ -14,11 +14,13 @@ useHead({
 </script>
 
 <template>
-  <div class="max-w-[1900px] mx-auto">
+  <div class="max-w-[2200px] mx-auto">
     <main
       class="m-4 p-4 bg-jo_grey/60 rounded-xl gap-y-32 grid
+        md:px-16 md:pt-8
         lg:gap-y-32
-        xl:gap-y-64"
+        xl:gap-y-64
+        2xl:px-32 2xl:pt-16"
     >
       <SectionHero />
       <SectionAbout />
