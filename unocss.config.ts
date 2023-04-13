@@ -33,6 +33,15 @@ export default defineConfig({
     transformerDirectives(),
   ],
   theme: {
+    breakpoints: {
+      'sm': '640px',
+      'md': '768px',
+      'lg': '1024px',
+      'xl': '1280px',
+      '2xl': '1536px',
+      '3xl': '1800px',
+      '4xl': '2400px',
+    },
     colors: {
       jo_green: '#82887C',
       jo_dark: '#403D39',
