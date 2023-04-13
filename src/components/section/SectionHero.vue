@@ -37,7 +37,7 @@
         </p>
       </div>
       <div class="flex justify-between gap-x-24 leading-snug mt-1">
-        <p class="italic jo_text_sm">
+        <p class="jo_text_sm">
           {{ $t('hero.subtitle.copyright') }}
         </p>
         <JoBerlinTimer />
