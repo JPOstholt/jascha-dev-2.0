@@ -47,9 +47,14 @@
         <a
           :href="$rt(detail.link)"
           target="_blank"
-          class="block jo_container px-4 underline hover:no-underline jo_text_base"
+          class="block jo_container px-4 jo_text_base"
         >
-          {{ $rt(detail.linkTitle) }}
+          <span class="underline hover:no-underline">
+            {{ $rt(detail.linkTitle) }}
+          </span>
+          <span>
+            →
+          </span>
         </a>
       </section>
     </div>
