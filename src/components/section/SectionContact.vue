@@ -1,7 +1,7 @@
 <template>
   <section :id="$t('nav[2].id')">
     <h2
-      class="w-full jo_border jo_text_h1 pb-1"
+      class="w-full jo_border jo_text_h1"
     >
       {{ $t('contact.title') }}
     </h2>

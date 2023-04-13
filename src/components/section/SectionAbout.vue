@@ -1,7 +1,7 @@
 <template>
   <section :id="$t('nav[0].id')" class="grid gap-y-12">
     <h2
-      class="w-full jo_border jo_text_h1 pb-1"
+      class="w-full jo_border jo_text_h1"
     >
       {{ $t('about.title') }}
     </h2>

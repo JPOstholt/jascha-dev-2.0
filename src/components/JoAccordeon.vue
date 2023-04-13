@@ -62,7 +62,7 @@ onMounted(() => {
   <li>
     <div
       class="jo_border jo_text_h2 w-full
-        lg:pb-1 lg:mb-1
+        lg:mb-1
         xl:mb-2"
     >
       <div class="w-full flex justify-between px-4 cursor-pointer" @click="toggleOpen()">
@@ -82,7 +82,7 @@ onMounted(() => {
     >
       <div
         class="mt-2
-          lg:pb-8"
+          pb-2 lg:pb-8 xl:pb-12"
       >
         <slot />
       </div>

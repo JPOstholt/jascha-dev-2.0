@@ -9,7 +9,7 @@ import transformerDirectives from '@unocss/transformer-directives'
 
 export default defineConfig({
   shortcuts: {
-    jo_border: 'border-b border-jo_dark/30 lg:border-b-2',
+    jo_border: 'border-b border-jo_dark/30 lg:border-b-2 pb-2 xl:pb-4',
     jo_text_base: 'text-base lg:text-xl xl:text-2xl',
     jo_text_sm: 'text-sm lg:text-base xl:text-lg',
     jo_text_lg: 'text-base lg:text-2xl xl:text-3xl font-medium',

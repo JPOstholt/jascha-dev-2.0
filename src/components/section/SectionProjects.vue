@@ -4,12 +4,12 @@
       class="w-full jo_text_h1"
     >
       <h2
-        class=" jo_border pb-1
+        class=" jo_border
         sm:text-jo_brown sm:flex sm:justify-between"
       >
         <span
-          class="block jo_border pb-1
-          sm:border-none"
+          class="block jo_border
+          sm:border-none sm:pb-0"
         >
           {{ $t('projects.title[0]') }}<span class="sm:hidden">-</span>
         </span>
@@ -19,7 +19,7 @@
           {{ $t('projects.title[1]') }}
         </span>
       </h2>
-      <p class="hidden sm:block jo_border pb-1 text-center">
+      <p class="hidden sm:block jo_border text-center">
         {{ $t('projects.title[2]') }}
       </p>
     </header>
