@@ -20,7 +20,7 @@
     </nav>
     <section>
       <h1
-        class="w-full jo_border jo_text_h1 text-jo_brown pb-2"
+        class="w-full jo_border jo_text_h1 text-jo_brown pb-2 text-right"
       >
         {{ $t('hero.h1') }}
       </h1>

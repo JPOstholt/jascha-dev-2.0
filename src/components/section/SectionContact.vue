@@ -9,8 +9,8 @@
       <JoBerlinTimer />
     </div>
     <p
-      class="jo_container jo_text_lg
-        my-16 lg:my-32 xl:my-64"
+      class="jo_text_lg
+        my-16 lg:my-16 xl:my-32"
     >
       {{ $t('contact.summary1[0]') }}
       <span class="font-display text-jo_brown">
@@ -39,7 +39,7 @@
             xl:mb-2"
         >
           <span
-            class="block jo_container px-4"
+            class="block px-4"
           >
             {{ $rt(detail.title) }}
           </span>
@@ -47,7 +47,7 @@
         <a
           :href="$rt(detail.link)"
           target="_blank"
-          class="block jo_container px-4 jo_text_base"
+          class="block px-4 jo_text_base"
         >
           <span class="underline hover:no-underline">
             {{ $rt(detail.linkTitle) }}

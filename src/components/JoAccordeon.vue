@@ -65,7 +65,7 @@ onMounted(() => {
         lg:pb-1 lg:mb-1
         xl:mb-2"
     >
-      <div class="jo_container w-full flex justify-between px-4 cursor-pointer" @click="toggleOpen()">
+      <div class="w-full flex justify-between px-4 cursor-pointer" @click="toggleOpen()">
         <h3
           class=""
         >
@@ -78,7 +78,7 @@ onMounted(() => {
     </div>
     <div
       ref="content"
-      class="jo_container px-4 overflow-hidden jo_text_base"
+      class="px-4 overflow-hidden jo_text_base"
     >
       <div
         class="mt-2

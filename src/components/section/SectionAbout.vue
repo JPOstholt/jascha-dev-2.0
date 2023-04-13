@@ -6,9 +6,9 @@
       {{ $t('about.title') }}
     </h2>
     <section
-      class="jo_container jo_text_lg w-full grid gap-y-12
-        lg:grid-cols-2 lg:gap-x-24 lg:my-32
-        xl:gap-x-48 xl:my-64"
+      class="jo_text_lg w-full grid gap-y-12
+        lg:grid-cols-2 lg:gap-x-24 lg:my-16
+        xl:gap-x-48 xl:my-32"
     >
       <p
         class="max-w-sm
