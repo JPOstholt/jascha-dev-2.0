@@ -16,7 +16,6 @@
           </a>
         </li>
       </ul>
-      <JoImprint />
     </nav>
     <section>
       <h1
