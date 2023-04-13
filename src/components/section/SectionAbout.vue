@@ -43,8 +43,7 @@
     </section>
     <ul
       class="grid gap-y-2
-        lg:gap-y-4
-        xl:gap-y-8"
+        lg:gap-y-4"
     >
       <JoAccordeon
         v-for="detail in $tm('about.details')"
