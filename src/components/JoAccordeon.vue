@@ -1,55 +1,35 @@
 <script lang="ts" setup>
 import gsap from 'gsap'
 
-const EASING = 'power1.inOut'
-const DURATION = 0.4
-
+// refs
 const arrow = ref(null)
-
 const content = ref(null)
+
+// get element height
 const { height } = useElementSize(content)
 const contentHeight = ref(0)
-
-const open = () => {
-  gsap.to(content.value, {
-    maxHeight: `${contentHeight.value}px`,
-    duration: DURATION,
-    opacity: 1,
-    ease: EASING,
-  })
-  gsap.to(arrow.value, {
-    rotateZ: 180,
-    duration: DURATION,
-    ease: EASING,
-  })
-}
-
-const close = () => {
-  contentHeight.value = height.value
-
-  gsap.to(content.value, {
-    maxHeight: 0,
-    duration: DURATION,
-    opacity: 1,
-    ease: EASING,
-  })
-  gsap.to(arrow.value, {
-    rotateZ: 0,
-    duration: DURATION,
-    ease: EASING,
-  })
-}
-
-const isOpen = ref(true)
-const toggleOpen = useToggle(isOpen)
-watch(isOpen, (value) => {
-  if (value)
-    open()
-  else close()
+onMounted(() => {
+  useTimeoutFn(() => {
+    contentHeight.value = height.value
+    gsap.set(content.value, {
+      maxHeight: 0,
+    })
+  }, 100)
 })
 
-onMounted(() => {
-  useTimeoutFn(toggleOpen, 100)
+// animate open/close
+const isOpen = ref(false)
+const toggleOpen = useToggle(isOpen)
+watch(isOpen, (value) => {
+  gsap.to(content.value, {
+    maxHeight: value ? `${contentHeight.value}px` : 0,
+    duration: 0.4,
+    opacity: 1,
+  })
+  gsap.to(arrow.value, {
+    rotateZ: value ? 180 : 0,
+    duration: 0.4,
+  })
 })
 </script>
 
