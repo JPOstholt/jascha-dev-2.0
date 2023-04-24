@@ -12,7 +12,6 @@
   },
   "dependencies": {
     "@vueuse/core": "^9.13.0",
-    "animejs": "^3.2.1",
     "vue": "^3.2.47",
     "vue-i18n": "9"
   },
@@ -20,7 +19,6 @@
     "@antfu/eslint-config": "^0.36.0",
     "@iconify-json/carbon": "^1.1.16",
     "@intlify/unplugin-vue-i18n": "^0.9.2",
-    "@types/animejs": "^3.1.7",
     "@types/node": "^18.14.6",
     "@unocss/reset": "^0.50.3",
     "@unocss/transformer-directives": "^0.51.2",
@@ -29,6 +27,7 @@
     "@vueuse/head": "^1.1.23",
     "critters": "^0.0.16",
     "eslint": "^8.35.0",
+    "gsap": "^3.11.5",
     "jsdom": "^21.1.0",
     "lint-staged": "^13.1.2",
     "pnpm": "^7.28.0",
