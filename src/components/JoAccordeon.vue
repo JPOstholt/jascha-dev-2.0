@@ -1,7 +1,8 @@
 <script lang="ts" setup>
-import anime from 'animejs'
-const EASING = 'easeInOutQuad'
-const DURATION = 400
+import gsap from 'gsap'
+
+const EASING = 'power1.inOut'
+const DURATION = 0.4
 
 const arrow = ref(null)
 
@@ -10,38 +11,32 @@ const { height } = useElementSize(content)
 const contentHeight = ref(0)
 
 const open = () => {
-  anime({
-    targets: content.value,
-    maxHeight: ['0px', `${contentHeight.value}px`],
+  gsap.to(content.value, {
+    maxHeight: `${contentHeight.value}px`,
     duration: DURATION,
     opacity: 1,
-    easing: EASING,
+    ease: EASING,
   })
-
-  anime({
-    targets: arrow.value,
-    rotate: 180,
+  gsap.to(arrow.value, {
+    rotateZ: 180,
     duration: DURATION,
-    easing: EASING,
+    ease: EASING,
   })
 }
 
 const close = () => {
   contentHeight.value = height.value
 
-  anime({
-    targets: content.value,
-    maxHeight: [`${contentHeight.value}px`, 0],
+  gsap.to(content.value, {
+    maxHeight: 0,
     duration: DURATION,
-    opacity: 0,
-    easing: EASING,
+    opacity: 1,
+    ease: EASING,
   })
-
-  anime({
-    targets: arrow.value,
-    rotate: 0,
+  gsap.to(arrow.value, {
+    rotateZ: 0,
     duration: DURATION,
-    easing: EASING,
+    ease: EASING,
   })
 }
 
