@@ -22,13 +22,13 @@
       <h1
         class="w-full jo_border jo_text_h1"
       >
-        <span class="block text-transparent text-stroke-jo_dark">
+        <span class="block text-transparent text-stroke-jo_dark font-serif">
           {{ $t('hero.h1') }}
         </span>
         <span class="block">
           Really great
         </span>
-        <span class="block">
+        <span class="block font-serif">
           web development.
         </span>
       </h1>

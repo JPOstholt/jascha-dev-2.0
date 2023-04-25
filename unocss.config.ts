@@ -51,6 +51,7 @@ export default defineConfig({
     },
     fontFamily: {
       display: ['CMGeom', 'sans-serif'],
+      serif: ['Italiana', 'serif'],
     },
   },
 })
