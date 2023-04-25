@@ -14,6 +14,7 @@ declare module '@vue/runtime-core' {
     EbzPanoramaSlide: typeof import('./src/components/panorama/EbzPanoramaSlide.vue')['default']
     JoAccordeon: typeof import('./src/components/JoAccordeon.vue')['default']
     JoBerlinTimer: typeof import('./src/components/JoBerlinTimer.vue')['default']
+    JoCursor: typeof import('./src/components/JoCursor.vue')['default']
     JoDivider: typeof import('./src/components/JoDivider.vue')['default']
     JoHero: typeof import('./src/components/JoHero.vue')['default']
     JoImprint: typeof import('./src/components/JoImprint/JoImprint.vue')['default']

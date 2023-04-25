@@ -14,18 +14,22 @@ useHead({
 </script>
 
 <template>
+  <!-- <JoCursor /> -->
   <main
-    class="m-4 p-4 bg-jo_grey/60 rounded-xl gap-y-32 grid
-        md:p-8
-        lg:gap-y-32 lg:m-8
-        xl:gap-y-64
-        3xl:p-16
-        4xl:px-32 4xl:m-32"
+    class="mx-4 rounded-xl grid
+        md:px-8
+        lg:mx-8
+        3xl:px-16
+        4xl:px-32 4xl:mx-32
+
+        "
   >
-    <SectionHero />
-    <SectionAbout />
-    <SectionProjects />
-    <SectionContact />
+    <div>
+      <SectionHero />
+      <SectionAbout />
+      <SectionProjects />
+      <SectionContact />
+    </div>
   </main>
   <SectionFooter />
 </template>

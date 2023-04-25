@@ -1,41 +1,30 @@
 <template>
-  <div class="flex flex-col justify-between">
+  <div class="flex flex-col justify-between h-screen py-8">
     <nav
-      class="flex items-start mb-48
-        lg:mb-52
-        xl:mb-80"
+      class="w-full flex justify-between"
     >
-      <ul class="flex-shrink-0">
-        <li v-for="item in $tm('nav')" :key="`nav_${$rt(item.id)}`">
-          <a
-            :href="`#${$rt(item.id)}`"
-            class="jo_text_base underline hover:no-underline
-              font-medium lg:font-normal"
-          >
-            {{ $rt(item.text) }}
-          </a>
-        </li>
-      </ul>
+      <a
+        v-for="item in $tm('nav')" :key="`nav_${$rt(item.id)}`"
+        :href="`#${$rt(item.id)}`"
+        class="jo_text_base font-medium lg:font-normal tracking-widest max-w-[5rem]"
+      >
+        {{ $rt(item.text) }}
+      </a>
     </nav>
-    <section>
+    <section class="flex flex-col flex-grow justify-center">
       <h1
-        class="w-full jo_border jo_text_h1 text-jo_brown text-right"
+        class="w-full jo_border jo_text_h1"
       >
-        {{ $t('hero.h1') }}
+        <span class="block text-transparent text-stroke-jo_dark">
+          {{ $t('hero.h1') }}
+        </span>
+        <span class="block">
+          Really great
+        </span>
+        <span class="block">
+          web development.
+        </span>
       </h1>
-      <div
-        class="jo_border jo_text_base flex justify-between gap-x-24 leading-snug mt-1
-          font-medium lg:font-normal
-          h-24 lg:h-28 xl:h-36"
-      >
-        <p>{{ $t('hero.subtitle.profession') }}</p>
-        <p class="text-right">
-          <span class="italic tracking-normal">
-            {{ $t('hero.subtitle.location[0]') }}
-          </span>
-          {{ $t('hero.subtitle.location[1]') }}
-        </p>
-      </div>
       <div class="flex justify-between gap-x-24 leading-snug mt-1">
         <p class="jo_text_sm">
           {{ $t('hero.subtitle.copyright') }}
@@ -43,5 +32,8 @@
         <JoBerlinTimer />
       </div>
     </section>
+    <p class="w-full text-center text-[8.5vw] font-display animate-">
+      ↓
+    </p>
   </div>
 </template>
