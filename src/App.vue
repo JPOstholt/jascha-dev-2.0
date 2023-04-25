@@ -16,13 +16,11 @@ useHead({
 <template>
   <!-- <JoCursor /> -->
   <main
-    class="mx-4 rounded-xl grid
+    class="mx-4
         md:px-8
         lg:mx-8
         3xl:px-16
-        4xl:px-32 4xl:mx-32
-
-        "
+        4xl:px-32 4xl:mx-32"
   >
     <div>
       <SectionHero />

@@ -1,7 +1,14 @@
 <template>
-  <div class="flex flex-col justify-between h-screen py-8">
+  <div class="flex flex-col justify-between h-screen pb-8 min-h-[40rem]">
     <nav
-      class="w-full flex justify-between"
+      class="w-full flex justify-between fixed top-0 left-0
+      z-10
+      py-8
+      px-4
+      md:px-8
+      lg:px-16
+      3xl:px-24
+      4xl:px-64"
     >
       <a
         v-for="item in $tm('nav')" :key="`nav_${$rt(item.id)}`"
@@ -32,7 +39,7 @@
         <JoBerlinTimer />
       </div>
     </section>
-    <p class="w-full text-center text-[8.5vw] font-display animate-">
+    <p class="w-full text-center text-[8.5vw] font-display">
       ↓
     </p>
   </div>

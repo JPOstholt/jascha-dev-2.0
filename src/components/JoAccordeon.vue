@@ -36,13 +36,13 @@ watch(isOpen, (value) => {
 <template>
   <li>
     <div
-      class="jo_border jo_text_h2 w-full
+      class="jo_border pb-1 w-full
         lg:mb-1
         xl:mb-2"
     >
       <div class="w-full flex justify-between px-4 cursor-pointer" @click="toggleOpen()">
         <h3
-          class=""
+          class="lowercase jo_text_base tracking-widest"
         >
           <slot name="title" />
         </h3>
@@ -53,7 +53,7 @@ watch(isOpen, (value) => {
     </div>
     <div
       ref="content"
-      class="px-4 overflow-hidden jo_text_base"
+      class="px-4 overflow-hidden jo_text_base font-light"
     >
       <div
         class="mt-2
