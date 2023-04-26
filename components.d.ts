@@ -17,6 +17,8 @@ declare module '@vue/runtime-core' {
     JoCursor: typeof import('./src/components/JoCursor.vue')['default']
     JoDivider: typeof import('./src/components/JoDivider.vue')['default']
     JoHero: typeof import('./src/components/JoHero.vue')['default']
+    JoHeroHeader: typeof import('./src/components/JoHeroHeader.vue')['default']
+    JoHeroHeading: typeof import('./src/components/JoHeroHeading.vue')['default']
     JoImprint: typeof import('./src/components/JoImprint/JoImprint.vue')['default']
     JoImprintContent: typeof import('./src/components/JoImprint/JoImprintContent.vue')['default']
     JoImprintPrivacy: typeof import('./src/components/JoImprint/JoImprintPrivacy.vue')['default']
