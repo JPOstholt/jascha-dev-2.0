@@ -1,7 +1,9 @@
 <script lang="ts" setup>
 import { SplitText, gsap } from 'gsap/all'
+gsap.registerPlugin(ScrollTrigger)
 
 const heading = ref(null)
+const container = ref(null)
 const { top } = useElementBounding(heading)
 const window = useWindowSize()
 
@@ -11,7 +13,11 @@ onMounted(() => {
   const split = new SplitText(heading.value, { type: 'chars' })
   const chars = split.chars
 
-  const tl = gsap.timeline({ delay: 1 })
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      toggleActions: 'play reverse play reverse',
+    },
+  })
 
   tl.to(heading.value, {
     height: '150vh',
@@ -27,11 +33,15 @@ onMounted(() => {
     }),
     marginRight: sizeFactor.value * 0.18,
   }, 0)
+
+  // Try setting marginTop: -100% on chars to make positioning easier
+  //
 })
 </script>
 
 <template>
   <div
+    ref="container"
     class="relative"
   >
     <h1
