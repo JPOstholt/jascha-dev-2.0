@@ -46,7 +46,8 @@ onMounted(() => {
   >
     <h1
       ref="heading"
-      class="absolute top-0 left-0 block text-transparent text-stroke-jo_dark font-serif"
+      class="absolute top-0 left-0 block text-transparent text-stroke-jo_dark font-serif w-screen
+      md:text-stroke-2"
     >
       {{ $t('hero.h1') }}
     </h1>

@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col justify-between h-screen pb-8 min-h-[40rem]">
+  <div class="flex flex-col justify-between h-screen pb-8 min-h-[40rem] md:min-h-screen md:h-auto">
     <section class="flex flex-col flex-grow justify-center">
       <header
         class="w-full jo_border jo_text_h1 mt-48"
@@ -21,7 +21,7 @@
         <JoBerlinTimer />
       </div>
     </section>
-    <p class="w-full text-center text-[8.5vw] font-display">
+    <p class="w-full text-center font-display text-stroke-1 text-[8.5vw] 2xl:text-[9rem] leading-none">
       ↓
     </p>
   </div>

@@ -12,8 +12,8 @@ const time = computed(() => date.value.toLocaleString('de-DE', {
 
 <template>
   <p
-    class="jo_text_sm font-serif tracking-wide -mr-0.5
-      min-w-[5.9rem] lg:min-w-[7.9rem] xl:min-w-[8.7rem]"
+    class="jo_text_sm font-serif tracking-wide -mr-1
+      min-w-[7em]"
   >
     {{ $t('timer') }} {{ time }}
   </p>
