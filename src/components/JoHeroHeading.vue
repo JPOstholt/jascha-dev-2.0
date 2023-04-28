@@ -28,7 +28,7 @@ onMounted(() => {
   tl.to(chars, {
     userSelect: 'none',
     fontSize: () => sizeFactor.value,
-    translateY: gsap.utils.distribute({
+    top: gsap.utils.distribute({
       base: 0,
       amount: sizeFactor.value,
     }),
@@ -50,8 +50,8 @@ onMounted(() => {
     }
 
     gsap.to(chars, {
-      left: index => gsap.utils.mapRange(0, window.width.value, -MOVEMENT_RANGE * index, MOVEMENT_RANGE * index, x),
-      top: index => gsap.utils.mapRange(0, window.height.value, -MOVEMENT_RANGE * index, MOVEMENT_RANGE * index, y),
+      translateX: index => gsap.utils.mapRange(0, window.width.value, -MOVEMENT_RANGE * index, MOVEMENT_RANGE * index, x),
+      translateY: index => gsap.utils.mapRange(0, window.height.value, -MOVEMENT_RANGE * index, MOVEMENT_RANGE * index, y),
       duration: 0.8,
     })
   })
