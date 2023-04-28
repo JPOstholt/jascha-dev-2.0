@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { SplitText, gsap } from 'gsap/all'
+import { ScrollTrigger, SplitText, gsap } from 'gsap/all'
 gsap.registerPlugin(ScrollTrigger)
 
 const heading = ref(null)
@@ -13,9 +13,44 @@ onMounted(() => {
   const split = new SplitText(heading.value, { type: 'chars', charsClass: 'flex-shrink' })
   const chars = split.chars
 
+  // follow mouse
+  const MOVEMENT_RANGE = 40
+
+  const { x, y, isOutside } = useMouseInElement(container.value)
+
+  function reset() {
+    gsap.to(chars, {
+      translateX: 0,
+      translateY: 0,
+      duration: 0.8,
+    })
+  }
+
+  watch([x, y, isOutside], ([x, y, isOutside]) => {
+    if (isOutside) {
+      reset()
+      return
+    }
+
+    gsap.to(chars, {
+      translateX: index => gsap.utils.mapRange(0, window.width.value, -MOVEMENT_RANGE * index, MOVEMENT_RANGE * index, x),
+      translateY: index => gsap.utils.mapRange(0, window.height.value, -MOVEMENT_RANGE * index, MOVEMENT_RANGE * index, y),
+      duration: 0.8,
+    })
+  })
+
+  // ScrollTrigger.create({
+  //   trigger: container.value,
+  //   start: 'bottom top',
+  //   onToggle: reset,
+  // })
+
+  // unfold
   const tl = gsap.timeline({
     scrollTrigger: {
       toggleActions: 'play reverse play reverse',
+      onLeave: reset,
+      onLeaveBack: reset,
     },
   })
 
@@ -34,27 +69,6 @@ onMounted(() => {
     }),
     marginRight: () => window.width.value > 1200 ? sizeFactor.value * 0.3 : sizeFactor.value * 0.18,
   }, 0)
-
-  const MOVEMENT_RANGE = 40
-
-  const { x, y, isOutside } = useMouseInElement(container.value)
-
-  watch([x, y, isOutside], ([x, y, isOutside]) => {
-    if (isOutside) {
-      gsap.to(chars, {
-        left: 0,
-        top: 0,
-        duration: 0.8,
-      })
-      return
-    }
-
-    gsap.to(chars, {
-      translateX: index => gsap.utils.mapRange(0, window.width.value, -MOVEMENT_RANGE * index, MOVEMENT_RANGE * index, x),
-      translateY: index => gsap.utils.mapRange(0, window.height.value, -MOVEMENT_RANGE * index, MOVEMENT_RANGE * index, y),
-      duration: 0.8,
-    })
-  })
 })
 </script>
 
