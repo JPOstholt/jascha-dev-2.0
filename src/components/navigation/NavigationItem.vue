@@ -1,0 +1,35 @@
+<script lang="ts" setup>
+import { gsap } from 'gsap/all'
+
+const props = defineProps<{
+  id: string
+  text: string
+}>()
+
+const link = ref(null)
+
+// use scroll trigger to add class?
+onMounted(() => {
+  gsap.from(`#${props.id}`, {
+    scrollTrigger: {
+      start: 'top center',
+      end: 'bottom center',
+      trigger: `#${props.id}`,
+      toggleClass: {
+        targets: link.value,
+        className: 'animate-pulse',
+      },
+    },
+  })
+})
+</script>
+
+<template>
+  <a
+    ref="link"
+    :href="`#${$rt(id)}`"
+    class="jo_text_base leading-tight lg:font-normal tracking-widest max-w-[5rem]"
+  >
+    {{ $rt(text) }}
+  </a>
+</template>

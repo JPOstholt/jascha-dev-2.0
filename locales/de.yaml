@@ -39,7 +39,7 @@ about:
   details:
     stack:
       title: Stack
-      description: Nuxt, Vue, Typescript, Tailwind, Anime.js
+      description: Nuxt, Vue, Typescript, Tailwind, GSAP
     languages:
       title: Languages
       description: German, English
