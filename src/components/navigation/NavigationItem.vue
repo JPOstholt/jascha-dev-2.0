@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { gsap } from 'gsap/all'
+import { ScrollTrigger } from 'gsap/all'
 
 const props = defineProps<{
   id: string
@@ -10,15 +10,13 @@ const link = ref(null)
 
 // use scroll trigger to add class?
 onMounted(() => {
-  gsap.from(`#${props.id}`, {
-    scrollTrigger: {
-      start: 'top center',
-      end: 'bottom center',
-      trigger: `#${props.id}`,
-      toggleClass: {
-        targets: link.value,
-        className: 'animate-pulse',
-      },
+  ScrollTrigger.create({
+    start: 'top center',
+    end: 'bottom center',
+    trigger: `#${props.id}`,
+    toggleClass: {
+      targets: link.value,
+      className: 'animate-pulse',
     },
   })
 })
