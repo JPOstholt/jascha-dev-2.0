@@ -1,14 +1,14 @@
 <template>
-  <section :id="$t('nav[0].id')" class="flex flex-col justify-between h-screen pb-8 min-h-[45rem]">
+  <section :id="$t('nav[0].id')" class="flex flex-col justify-between h-screen py-8 min-h-[45rem]">
     <div
       class="flex flex-col justify-center flex-grow"
     >
       <h2
-        class="w-full jo_border jo_text_h1"
+        class="w-full jo_border jo_text_h1 font-serif"
       >
         {{ $t('about.title') }}
       </h2>
-      <section class="jo_text_base font-lightgrid grid gap-y-8 my-16">
+      <section class="jo_text_base font-extralight grid grid gap-y-4 my-8">
         <p>
           {{ $t('about.summary1[0]') }}
 
