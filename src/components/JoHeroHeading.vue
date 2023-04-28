@@ -10,7 +10,7 @@ const window = useWindowSize()
 const sizeFactor = computed(() => (window.height.value + window.width.value) / 5.0)
 
 onMounted(() => {
-  const split = new SplitText(heading.value, { type: 'chars' })
+  const split = new SplitText(heading.value, { type: 'chars', charsClass: 'flex-shrink' })
   const chars = split.chars
 
   const tl = gsap.timeline({
@@ -20,34 +20,56 @@ onMounted(() => {
   })
 
   tl.to(heading.value, {
-    height: '150vh',
+    height: () => window.height.value - sizeFactor.value,
     width: '120vw',
-    translateY: -top.value,
+    translateY: () => -top.value,
     translateX: '-3vw',
   })
   tl.to(chars, {
-    fontSize: sizeFactor.value,
-    y: gsap.utils.distribute({
+    userSelect: 'none',
+    fontSize: () => sizeFactor.value,
+    translateY: gsap.utils.distribute({
       base: 0,
-      amount: window.height.value / 2.2,
+      amount: sizeFactor.value,
     }),
-    marginRight: sizeFactor.value * 0.18,
+    marginRight: () => window.width.value > 1200 ? sizeFactor.value * 0.3 : sizeFactor.value * 0.18,
   }, 0)
 
-  // Try setting marginTop: -100% on chars to make positioning easier
-  //
+  const MOVEMENT_RANGE = 40
+
+  const { x, y, isOutside } = useMouseInElement(container.value)
+
+  watch([x, y, isOutside], ([x, y, isOutside]) => {
+    if (isOutside) {
+      gsap.to(chars, {
+        left: 0,
+        top: 0,
+        duration: 0.8,
+      })
+      return
+    }
+
+    gsap.to(chars, {
+      left: index => gsap.utils.mapRange(0, window.width.value, -MOVEMENT_RANGE * index, MOVEMENT_RANGE * index, x),
+      top: index => gsap.utils.mapRange(0, window.height.value, -MOVEMENT_RANGE * index, MOVEMENT_RANGE * index, y),
+      duration: 0.8,
+    })
+  })
 })
 </script>
 
 <template>
   <div
     ref="container"
+    class="absolute top-0 left-0 w-screen h-screen"
+  />
+  <div
     class="relative"
   >
     <h1
       ref="heading"
-      class="absolute top-0 left-0 block text-transparent text-stroke-jo_dark font-serif w-screen
-      md:text-stroke-2"
+      class="absolute top-0 left-0 block text-transparent text-stroke-jo_dark font-serif md:text-stroke-2
+      w-screen flex flex-wrap"
     >
       {{ $t('hero.h1') }}
     </h1>
@@ -59,3 +81,9 @@ onMounted(() => {
     </p>
   </div>
 </template>
+
+<style>
+html, body {
+  overscroll-behavior: none
+}
+</style>
