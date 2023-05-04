@@ -8,7 +8,6 @@ const props = defineProps<{
 
 const link = ref(null)
 
-// use scroll trigger to add class?
 onMounted(() => {
   ScrollTrigger.create({
     start: 'top center',

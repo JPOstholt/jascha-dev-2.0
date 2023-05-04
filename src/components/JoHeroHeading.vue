@@ -75,7 +75,7 @@ onMounted(() => {
 <template>
   <div
     ref="container"
-    class="absolute top-0 left-0 w-screen h-screen"
+    class="absolute top-0 left-0 w-screen h-screen z-0"
   />
   <div
     class="relative"
