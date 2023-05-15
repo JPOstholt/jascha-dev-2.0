@@ -8,8 +8,6 @@ nav:
     id: recent_projects
   - text: contact.
     id: contact
-imprint:
-  imprint
 hero:
   h1: Jascha Ostholt
   subtitle:
@@ -21,21 +19,13 @@ hero:
     copyright:
       © 2023
 timer:
-  'Berlin:'
+  'Berlin: {time}'
 about:
   title: About.
   summary1:
-    - I am a
-    - passionate web dev
-    - with
-    - 6+ years of experience.
+    I am a passionate web dev with 6+ years of experience.
   summary2:
-    - I balance
-    - pragmatism
-    - with
-    - attention to detail
-    - and writing
-    - clean and future proof code.
+    I balance pragmatism with attention to detail and writing clean and future proof code.
   details:
     stack:
       title: Stack
@@ -54,9 +44,8 @@ about:
       title: Downloads
       description: CV (PDF) ⇩
 projects:
-  title:
-    - Recent Projects
-    - (2016 - today)
+  title: Recent Projects
+  subtitle: (2016 - today)
   projects:
     - title: elvah
       link: http://www.elvah.de
@@ -74,3 +63,4 @@ contact:
     - title: linkedIn
       link: https://www.linkedin.com/in/jascha-ostholt/
 footer: 'Design & Development: Jascha Ostholt. Font: Cedrik Müller.'
+imprint: imprint

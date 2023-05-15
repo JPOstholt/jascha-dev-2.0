@@ -10,26 +10,10 @@
       </h2>
       <section class="jo_text_base font-extralight grid grid gap-y-4 my-8">
         <p>
-          {{ $t('about.summary1[0]') }}
-
-          {{ $t('about.summary1[1]') }}
-
-          {{ $t('about.summary1[2]') }}
-
-          {{ $t('about.summary1[3]') }}
+          {{ $t('about.summary1') }}
         </p>
         <p>
-          {{ $t('about.summary2[0]') }}
-
-          {{ $t('about.summary2[1]') }}
-
-          {{ $t('about.summary2[2]') }}
-
-          {{ $t('about.summary2[3]') }}
-
-          {{ $t('about.summary2[4]') }}
-
-          {{ $t('about.summary2[5]') }}
+          {{ $t('about.summary2') }}
         </p>
       </section>
       <ul

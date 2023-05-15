@@ -28,10 +28,10 @@ onMounted(() => {
       <h2
         class="leading-[9vw] text-[8.5vw] tracking-wide 2xl:text-[9rem] 2xl:leading-[9.2rem] font-extralight"
       >
-        {{ $t('projects.title[0]') }}
+        {{ $t('projects.title') }}
       </h2>
       <p class="jo_text_h1 !text-stroke-none !pb-0">
-        {{ $t('projects.title[1]') }}
+        {{ $t('projects.subtitle') }}
       </p>
     </header>
     <div
