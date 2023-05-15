@@ -31,7 +31,6 @@ useHead({
       <SectionContact />
     </div>
   </main>
-  <SectionFooter />
 </template>
 
 <style>

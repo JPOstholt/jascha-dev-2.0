@@ -1,5 +1,8 @@
 <template>
-  <div class="flex flex-col justify-between h-screen pb-8 min-h-[40rem] md:min-h-screen md:h-auto">
+  <div
+    id="hero"
+    class="flex flex-col justify-between h-screen pb-8 min-h-[40rem] md:min-h-screen md:h-auto"
+  >
     <section class="flex flex-col flex-grow justify-center">
       <header
         class="w-full jo_border jo_text_h1 mt-48"

@@ -1,62 +1,82 @@
+<script lang="ts" setup>
+import gsap from 'gsap'
+
+const socials = [
+  'email', 'linkedIn',
+]
+
+const container2 = ref(null)
+const arrows = ref<HTMLElement[]>([])
+let arrowAnimations: gsap.core.Tween[] = []
+
+onMounted(() => {
+  arrowAnimations = arrows.value.map(element => gsap.to(element, {
+    translateY: -50,
+    paused: true,
+    color: '#403D39',
+  }))
+
+  const reverse = useDebounceFn(() => {
+    arrowAnimations.forEach(tween => tween.reverse())
+  }, 1000)
+
+  const window = useWindowSize()
+  const { x, isOutside } = useMouseInElement(container2.value)
+
+  watch([x, isOutside], ([x, isOutside]) => {
+    if (isOutside)
+      return
+
+    const activeIndex = Math.floor(gsap.utils.mapRange(0, window.width.value, 0, 5, x))
+    arrowAnimations.forEach((tween, index) => {
+      if (activeIndex === index)
+        tween.play()
+      else
+        tween.reverse()
+
+      reverse()
+    })
+  })
+})
+</script>
+
 <template>
-  <section :id="$t('nav[2].id')">
-    <h2
-      class="w-full jo_border jo_text_h1"
+  <div
+    :id="$t('nav[2].id')"
+    class="h-screen flex flex-col"
+  >
+    <section
+      ref="container2"
+      class="flex-grow flex flex-col justify-center text-center gap-y-2"
     >
-      {{ $t('contact.title') }}
-    </h2>
-    <div class="w-full flex justify-end mt-2">
-      <JoBerlinTimer />
-    </div>
-    <p
-      class="jo_text_lg
-        my-16 lg:my-16 xl:my-32"
-    >
-      {{ $t('contact.summary1[0]') }}
-      <span class="font-display text-jo_brown">
-        {{ $t('contact.summary1[1]') }}
-      </span>
-      {{ $t('contact.summary1[2]') }}
-      <span class="italic">
-        {{ $t('contact.summary1[3]') }}
-      </span>
-      <span class="block font-extralight">
-        {{ $t('contact.summary2') }}
-      </span>
-    </p>
-    <div
-      class="grid gap-y-8
-        lg:gap-y-16 lg:mb-16
-        xl:gap-y-32 xl:mb-32"
-    >
-      <section
-        v-for="detail in $tm('contact.details')"
-        :key="`contact_${$rt(detail.title)}`"
+      <h2
+        class="w-full font-medium text-xl"
       >
-        <h3
-          class="jo_border jo_text_h2
-            lg:mb-1
-            xl:mb-2"
-        >
-          <span
-            class="block px-4"
-          >
-            {{ $rt(detail.title) }}
-          </span>
-        </h3>
-        <a
-          :href="$rt(detail.link)"
-          target="_blank"
-          class="block px-4 jo_text_base mt-2"
-        >
-          <span class="underline hover:no-underline">
-            {{ $rt(detail.linkTitle) }}
-          </span>
-          <span>
-            →
-          </span>
-        </a>
-      </section>
+        {{ $t('contact.title') }}
+      </h2>
+      <a
+        v-for="detail in $tm('contact.details')" :key="`contact_${$rt(detail.title)}`"
+        :href="$rt(detail.link)" class="w-full block text-lg"
+      >
+        <span class="underline">
+          {{ $rt(detail.title) }}
+        </span>
+        <span class="inline-block underline transfrom rotate-270 font-display ml-1">↓</span>
+      </a>
+    </section>
+    <div class="w-full text-center">
+      <a
+        v-for="_, index in Array(5)"
+        :key="`arrow_${index}`" ref="arrows"
+        href="#hero"
+        class="inline-block text-stroke-1 text-stroke-jo_dark text-transparent text-[34vw] font-display leading-none"
+      >
+        ↑
+      </a>
     </div>
-  </section>
+    <footer class="text-[2.9vw] font-extralight text-center mb-4">
+      {{ $t('footer') }}
+      <JoImprint />
+    </footer>
+  </div>
 </template>
