@@ -24,8 +24,8 @@
         <JoBerlinTimer />
       </div>
     </section>
-    <p class="w-full text-center font-display text-stroke-1 text-[8.5vw] 2xl:text-[9rem] leading-none z-10">
+    <a :href="`#${$t('nav[0].id')}`" class="block w-full text-center font-display text-stroke-1 text-[8.5vw] 2xl:text-[9rem] leading-none z-10">
       ↓
-    </p>
+    </a>
   </div>
 </template>

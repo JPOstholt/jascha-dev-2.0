@@ -76,8 +76,8 @@
         </JoAccordeon>
       </ul>
     </div>
-    <p class="w-full text-center text-[8.5vw] font-display">
+    <a :href="`#${$t('nav[1].id')}`" class="block w-full text-center text-[8.5vw] font-display">
       ↓
-    </p>
+    </a>
   </section>
 </template>
