@@ -18,7 +18,7 @@
         </h2>
       </header>
       <div class="flex justify-between gap-x-24 leading-snug mt-1 z-10">
-        <p class="jo_text_sm font-serif">
+        <p class="jo_text_sm font-display">
           {{ $t('hero.subtitle.copyright') }}
         </p>
         <JoBerlinTimer />
