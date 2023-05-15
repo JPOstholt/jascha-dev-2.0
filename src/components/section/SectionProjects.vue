@@ -1,43 +1,57 @@
+<script lang="ts" setup>
+import gsap from 'gsap'
+const projectTitles = ref<HTMLElement[]>([])
+const window = useWindowSize()
+
+onMounted(() => {
+  projectTitles.value.forEach((titleElement) => {
+    if (titleElement.scrollWidth > window.width.value) {
+      gsap.to(titleElement, {
+        keyframes: {
+          x: ['100%', '-150%'],
+          easeEach: 'none',
+        },
+        ease: 'none',
+        duration: 15,
+        repeat: -1,
+      })
+    }
+  })
+})
+</script>
+
 <template>
-  <section :id="$t('nav[1].id')">
+  <section :id="$t('nav[1].id')" class="py-8 flex flex-col justify-between min-h-screen space-y-20">
     <header
-      class="w-full jo_text_h1"
+      class="w-full mt-32"
     >
       <h2
-        class=" jo_border
-        sm:text-jo_brown sm:flex sm:justify-between"
+        class="leading-[9vw] text-[8.5vw] tracking-wide 2xl:text-[9rem] 2xl:leading-[9.2rem] font-extralight"
       >
-        <span
-          class="block jo_border
-          sm:border-none sm:pb-0"
-        >
-          {{ $t('projects.title[0]') }}<span class="sm:hidden">-</span>
-        </span>
-        <span
-          class="block text-right"
-        >
-          {{ $t('projects.title[1]') }}
-        </span>
+        {{ $t('projects.title[0]') }}
       </h2>
-      <p class="hidden sm:block jo_border text-center">
-        {{ $t('projects.title[2]') }}
+      <p class="jo_text_h1 !text-stroke-none !pb-0">
+        {{ $t('projects.title[1]') }}
       </p>
     </header>
     <div
-      class="text-center mt-16 grid gap-y-16
-      lg:mt-32 lg:gap-y-20
-      lg:gap-y-24"
+      class="flex-grow w-full flex flex-col justify-between overflow-hidden"
     >
-      <a
-        v-for="project in $tm('projects.projects')"
-        :key="`projects_${$rt(project.title)}`"
-        :href="$rt(project.link)"
-        class="block text-2xl underline hover:no-underline
-        lg:text-3xl
-        xl:text-4xl"
-      >
-        {{ $rt(project.title) }}
-      </a>
+      <template v-for="project in $tm('projects.projects')" :key="`projects_${$rt(project.title)}`">
+        <a
+          ref="projectTitles"
+          :href="$rt(project.link)"
+          class="font-serif text-7xl whitespace-nowrap"
+        >
+          <span>
+            {{ $rt(project.title) }}
+          </span>
+        </a>
+        <div class="jo_border" />
+      </template>
     </div>
+    <a :href="`#${$t('nav[2].id')}`" class="block w-full text-center text-[8.5vw] font-display">
+      ↓
+    </a>
   </section>
 </template>
