@@ -38,7 +38,7 @@ onMounted(() => {
       <span
         v-for="_, index in Array(4)"
         :key="`nav_arrow_${index}`"
-        class="block w-4 h-4 absolute top-full leading-none pl-0.5"
+        class="block w-4 h-4 absolute top-full leading-none pl-0.5 font-display"
         :style="`left: ${index * 40 - 20}%; transform: translateY(${Math.pow(index - 1.5, 2) * -4}px) rotate(${Math.pow(index - 1.5, 3) * -10}deg)`"
       >
         ↑

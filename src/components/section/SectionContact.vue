@@ -1,10 +1,6 @@
 <script lang="ts" setup>
 import gsap from 'gsap'
 
-const socials = [
-  'email', 'linkedIn',
-]
-
 const container2 = ref(null)
 const arrows = ref<HTMLElement[]>([])
 let arrowAnimations: gsap.core.Tween[] = []

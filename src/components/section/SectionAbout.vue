@@ -50,7 +50,8 @@
                 :key="`about_education_${$rt(education.year)}`"
               >
                 <td
-                  class="min-w-16
+                  class="font-display
+                  min-w-16
                   lg:min-w-32
                   xl:min-w-64"
                 >
