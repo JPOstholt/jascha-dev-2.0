@@ -15,7 +15,6 @@ useHead({
 
 <template>
   <JoNavigation />
-  <!-- <JoCursor /> -->
   <main
     class="px-4
         md:px-12
@@ -24,10 +23,10 @@ useHead({
         4xl:px-64
         w-screen overflow-hidden"
   >
-    <SectionHero />
-    <SectionAbout />
-    <SectionProjects />
-    <SectionContact />
+    <JoHero />
+    <JoAbout />
+    <JoProjects />
+    <JoContact />
   </main>
 </template>
 

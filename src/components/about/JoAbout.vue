@@ -20,7 +20,7 @@
         class="grid gap-y-1
         lg:gap-y-4"
       >
-        <JoAccordeon
+        <JoAboutAccordeon
           v-for="detail in $tm('about.details')"
           :key="`about_${$rt(detail.title)}`"
         >
@@ -58,7 +58,7 @@
               {{ $rt(detail.description) }}
             </p>
           </template>
-        </JoAccordeon>
+        </JoAboutAccordeon>
       </ul>
     </div>
     <a :href="`#${$t('nav[1].id')}`" class="block w-full text-center text-[8.5vw] font-display">

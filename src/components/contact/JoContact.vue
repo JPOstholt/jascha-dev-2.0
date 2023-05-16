@@ -57,7 +57,8 @@ onMounted(() => {
         {{ $t('contact.title') }}
       </h2>
       <a
-        v-for="detail in $tm('contact.details')" :key="`contact_${$rt(detail.title)}`"
+        v-for="detail in $tm('contact.details')"
+        :key="`contact_${$rt(detail.title)}`"
         :href="$rt(detail.link)"
         class="text-lg"
         lg="text-xl"

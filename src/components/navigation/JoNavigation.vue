@@ -13,7 +13,7 @@
       3xl:px-24
       4xl:px-64"
   >
-    <NavigationItem
+    <JoNavigationItem
       v-for="item in $tm('nav')"
       :id="$rt(item.id)"
       :key="`nav_${$rt(item.id)}`"
