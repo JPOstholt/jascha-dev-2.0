@@ -47,6 +47,7 @@ onMounted(() => {
           ref="projectTitles"
           :href="$rt(project.link)"
           class="font-serif text-7xl whitespace-nowrap"
+          target="_blank"
           xl="text-8xl"
         >
           <span>
