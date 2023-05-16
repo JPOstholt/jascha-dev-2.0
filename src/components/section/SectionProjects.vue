@@ -21,9 +21,14 @@ onMounted(() => {
 </script>
 
 <template>
-  <section :id="$t('nav[1].id')" class="py-8 flex flex-col justify-between min-h-screen space-y-20">
+  <section
+    :id="$t('nav[1].id')"
+    class="py-8 flex flex-col justify-between min-h-screen space-y-20"
+  >
     <header
       class="w-full mt-32"
+      sm="mt-16"
+      lg="mt-32"
     >
       <h2
         class="leading-[9vw] text-[8.5vw] tracking-wide 2xl:text-[9rem] 2xl:leading-[9.2rem] font-extralight"
@@ -42,6 +47,7 @@ onMounted(() => {
           ref="projectTitles"
           :href="$rt(project.link)"
           class="font-serif text-7xl whitespace-nowrap"
+          xl="text-8xl"
         >
           <span>
             {{ $rt(project.title) }}
