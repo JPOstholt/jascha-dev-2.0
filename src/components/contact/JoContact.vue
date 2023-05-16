@@ -57,7 +57,8 @@ onMounted(() => {
         {{ $t('contact.title') }}
       </h2>
       <a
-        v-for="detail in $tm('contact.details')" :key="`contact_${$rt(detail.title)}`"
+        v-for="detail in $tm('contact.details')"
+        :key="`contact_${$rt(detail.title)}`"
         :href="$rt(detail.link)"
         class="text-lg"
         lg="text-xl"
@@ -73,17 +74,15 @@ onMounted(() => {
         v-for="_, index in Array(5)"
         :key="`arrow_${index}`" ref="arrows"
         href="#hero"
-        class="inline-block text-stroke-1 text-stroke-jo_dark text-transparent text-[34vw] font-display leading-none
-        4xl:text-[28vw]"
-        md="text-[30vw]"
-        lg="text-[31vw]"
+        class="inline-block text-stroke-1 text-stroke-jo_dark text-transparent font-display leading-none
+        text-[34vw] md:text-[30vw] lg:text-[31vw] 4xl:text-[28vw]"
       >
         ↑
       </a>
     </div>
     <footer
-      class="text-[2.9vw] font-extralight text-center mb-4"
-      lg="text-3xl"
+      class="font-extralight text-center mb-4
+        text-[2.9vw] lg:text-3xl"
     >
       {{ $t('footer') }}
       <JoImprint />

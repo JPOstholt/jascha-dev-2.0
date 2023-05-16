@@ -2,6 +2,7 @@ import { ViteSSG } from 'vite-ssg/single-page'
 
 import { gsap } from 'gsap'
 import { SplitText } from 'gsap/SplitText'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 import App from './App.vue'
 

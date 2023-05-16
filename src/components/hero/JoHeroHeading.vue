@@ -1,12 +1,12 @@
 <script lang="ts" setup>
-import { ScrollTrigger, SplitText, gsap } from 'gsap/all'
-gsap.registerPlugin(ScrollTrigger)
+import { SplitText, gsap } from 'gsap/all'
 
 const heading = ref(null)
 const container = ref(null)
 const { top } = useElementBounding(heading)
 const window = useWindowSize()
 
+// todo use clamp, min and max instead of sizeFactor
 const sizeFactor = computed(() => (window.height.value + window.width.value) / 5.0)
 
 onMounted(() => {
@@ -38,12 +38,6 @@ onMounted(() => {
       duration: 0.8,
     })
   })
-
-  // ScrollTrigger.create({
-  //   trigger: container.value,
-  //   start: 'bottom top',
-  //   onToggle: reset,
-  // })
 
   // unfold
   const tl = gsap.timeline({

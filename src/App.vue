@@ -14,21 +14,22 @@ useHead({
 </script>
 
 <template>
-  <JoNavigation />
-  <!-- <JoCursor /> -->
-  <main
-    class="px-4
+  <div>
+    <JoNavigation />
+    <main
+      class="px-4
         md:px-12
         lg:px-20
         3xl:px-32
         4xl:px-64
         w-screen overflow-hidden"
-  >
-    <SectionHero />
-    <SectionAbout />
-    <SectionProjects />
-    <SectionContact />
-  </main>
+    >
+      <JoHero />
+      <JoAbout />
+      <JoProjects />
+      <JoContact />
+    </main>
+  </div>
 </template>
 
 <style>

@@ -9,19 +9,17 @@ export {}
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
-    JoAccordeon: typeof import('./src/components/JoAccordeon.vue')['default']
-    JoBerlinTimer: typeof import('./src/components/JoBerlinTimer.vue')['default']
-    JoCursor: typeof import('./src/components/JoCursor.vue')['default']
-    JoHeroHeading: typeof import('./src/components/JoHeroHeading.vue')['default']
-    JoImprint: typeof import('./src/components/JoImprint/JoImprint.vue')['default']
-    JoImprintContent: typeof import('./src/components/JoImprint/JoImprintContent.vue')['default']
-    JoImprintPrivacy: typeof import('./src/components/JoImprint/JoImprintPrivacy.vue')['default']
+    JoAbout: typeof import('./src/components/about/JoAbout.vue')['default']
+    JoAboutAccordeon: typeof import('./src/components/about/JoAboutAccordeon.vue')['default']
+    JoContact: typeof import('./src/components/contact/JoContact.vue')['default']
+    JoHero: typeof import('./src/components/hero/JoHero.vue')['default']
+    JoHeroHeading: typeof import('./src/components/hero/JoHeroHeading.vue')['default']
+    JoHeroTimer: typeof import('./src/components/hero/JoHeroTimer.vue')['default']
+    JoImprint: typeof import('./src/components/imprint/JoImprint.vue')['default']
+    JoImprintContent: typeof import('./src/components/imprint/JoImprintContent.vue')['default']
+    JoImprintPrivacy: typeof import('./src/components/imprint/JoImprintPrivacy.vue')['default']
     JoNavigation: typeof import('./src/components/navigation/JoNavigation.vue')['default']
-    NavigationItem: typeof import('./src/components/navigation/NavigationItem.vue')['default']
-    SectionAbout: typeof import('./src/components/section/SectionAbout.vue')['default']
-    SectionContact: typeof import('./src/components/section/SectionContact.vue')['default']
-    SectionFooter: typeof import('./src/components/section/SectionFooter.vue')['default']
-    SectionHero: typeof import('./src/components/section/SectionHero.vue')['default']
-    SectionProjects: typeof import('./src/components/section/SectionProjects.vue')['default']
+    JoNavigationItem: typeof import('./src/components/navigation/JoNavigationItem.vue')['default']
+    JoProjects: typeof import('./src/components/projects/JoProjects.vue')['default']
   }
 }

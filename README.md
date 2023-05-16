@@ -1,14 +1,25 @@
-# Minimal Vue Template
+# Jascha.dev homepage
 
-Minimal vue template based on vitesse with only UnoCss and i18n.
+Check it out live at [https://jascha.dev](https://jascha.dev)
 
-Install:
+## Stack
 
+Based on [vitesse-lite by @antfu](https://github.com/antfu/vitesse-lite).
+
+- Vite SSG
+- vue-i18n
+- GSAP
+- VueUse
+- UnoCSS
+
+## Building locally
+
+### Install:
 ```
 pnpm i
 ```
 
-Run dev:
+### Run dev:
 ```
 pnpm dev
 ```

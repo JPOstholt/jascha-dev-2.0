@@ -1,14 +1,14 @@
 <template>
   <section :id="$t('nav[0].id')" class="flex flex-col justify-between h-screen py-8 min-h-[45rem]">
     <div
-      class="flex flex-col justify-center flex-grow"
+      class="flex-grow flex flex-col justify-center"
     >
       <h2
-        class="w-full jo_border jo_text_h1 font-serif"
+        class="w-full jo_border jo_text_h1 text-stroke-1 pb-8 font-serif"
       >
         {{ $t('about.title') }}
       </h2>
-      <section class="jo_text_base font-extralight grid grid gap-y-4 my-8">
+      <section class="jo_text_base font-extralight grid gap-y-4 my-8">
         <p>
           {{ $t('about.summary1') }}
         </p>
@@ -20,7 +20,7 @@
         class="grid gap-y-1
         lg:gap-y-4"
       >
-        <JoAccordeon
+        <JoAboutAccordeon
           v-for="detail in $tm('about.details')"
           :key="`about_${$rt(detail.title)}`"
         >
@@ -58,10 +58,10 @@
               {{ $rt(detail.description) }}
             </p>
           </template>
-        </JoAccordeon>
+        </JoAboutAccordeon>
       </ul>
     </div>
-    <a :href="`#${$t('nav[1].id')}`" class="block w-full text-center text-[8.5vw] font-display">
+    <a :href="`#${$t('nav[1].id')}`" class="block self-center text-center text-[8.5vw] font-display">
       ↓
     </a>
   </section>
