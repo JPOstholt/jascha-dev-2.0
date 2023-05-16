@@ -21,15 +21,14 @@ onMounted(() => {
 const isOpen = ref(false)
 const toggleOpen = useToggle(isOpen)
 watch(isOpen, (value) => {
-  gsap.to(content.value, {
-    maxHeight: value ? `${contentHeight.value}px` : 0,
-    duration: 0.4,
-    opacity: 1,
-  })
-  gsap.to(arrow.value, {
-    rotateZ: value ? 180 : 0,
-    duration: 0.4,
-  })
+  gsap.timeline({ defaults: { duration: 0.4 } })
+    .to(content.value, {
+      maxHeight: value ? `${contentHeight.value}px` : 0,
+      opacity: 1,
+    })
+    .to(arrow.value, {
+      rotateZ: value ? 180 : 0,
+    }, 0)
 })
 </script>
 
