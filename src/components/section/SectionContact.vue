@@ -73,9 +73,10 @@ onMounted(() => {
         v-for="_, index in Array(5)"
         :key="`arrow_${index}`" ref="arrows"
         href="#hero"
-        class="inline-block text-stroke-1 text-stroke-jo_dark text-transparent text-[34vw] font-display leading-none"
+        class="inline-block text-stroke-1 text-stroke-jo_dark text-transparent text-[34vw] font-display leading-none
+        4xl:text-[28vw]"
         md="text-[30vw]"
-        lg="text-[32vw] "
+        lg="text-[31vw]"
       >
         ↑
       </a>
