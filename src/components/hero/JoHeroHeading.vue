@@ -6,6 +6,7 @@ const container = ref(null)
 const { top } = useElementBounding(heading)
 const window = useWindowSize()
 
+// todo use clamp, min and max instead of sizeFactor
 const sizeFactor = computed(() => (window.height.value + window.width.value) / 5.0)
 
 onMounted(() => {

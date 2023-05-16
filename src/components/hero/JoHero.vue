@@ -1,15 +1,17 @@
 <template>
   <div
     id="hero"
-    class="flex flex-col justify-between h-screen pb-8 min-h-[40rem] md:min-h-screen md:h-auto"
+    class="flex flex-col justify-between pb-8
+      h-screen md:h-auto
+      min-h-[40rem] md:min-h-screen"
   >
     <section class="flex flex-col flex-grow justify-center">
       <header
-        class="w-full jo_border jo_text_h1 mt-48"
+        class="w-full jo_border jo_text_h1 text-stroke-1 pb-8 mt-48"
       >
         <JoHeroHeading />
         <h2 class="z-10 relative">
-          <span class="block ">
+          <span class="block font-display">
             Really great
           </span>
           <span class="block font-serif">
@@ -24,7 +26,7 @@
         <JoHeroTimer />
       </div>
     </section>
-    <a :href="`#${$t('nav[0].id')}`" class="block w-full text-center font-display text-stroke-1 text-[8.5vw] 2xl:text-[9rem] leading-none z-10">
+    <a :href="`#${$t('nav[0].id')}`" class="block self-center text-center font-display text-stroke-1 text-[8.5vw] 2xl:text-[9rem] leading-none z-10">
       ↓
     </a>
   </div>

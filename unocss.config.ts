@@ -13,7 +13,7 @@ export default defineConfig({
     jo_text_base: 'text-base lg:text-xl xl:text-2xl',
     jo_text_sm: 'text-sm sm:text-base md:text-lg lg:text-xl xl:text-xl 2xl:text-2xl',
     jo_text_lg: 'text-base lg:text-2xl xl:text-3xl font-medium',
-    jo_text_h1: 'font-display leading-[9vw] text-stroke-1 pb-8 text-[8.5vw] tracking-wide 2xl:text-[9rem] 2xl:leading-[9.2rem]',
+    jo_text_h1: 'leading-[9vw] text-[8.5vw] tracking-wide 2xl:text-[9rem] 2xl:leading-[9.2rem]',
     jo_text_h2: 'text-lg font-display lg:text-2xl xl:text-3xl',
   },
   presets: [
