@@ -22,20 +22,17 @@ useHead({
         lg:px-20
         3xl:px-32
         4xl:px-64
-        overflow-hidden"
+        w-screen overflow-hidden"
   >
-    <div>
-      <SectionHero />
-      <SectionAbout />
-      <SectionProjects />
-      <SectionContact />
-    </div>
+    <SectionHero />
+    <SectionAbout />
+    <SectionProjects />
+    <SectionContact />
   </main>
 </template>
 
 <style>
 body {
-  @apply bg-jo_beige;
-  @apply text-jo_dark;
+  @apply bg-jo_beige text-jo_dark w-screen overflow-x-hidden;
 }
 </style>

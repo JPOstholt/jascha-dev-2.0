@@ -39,20 +39,28 @@ onMounted(() => {
 <template>
   <div
     :id="$t('nav[2].id')"
-    class="h-screen flex flex-col"
+    ref="container2"
+    class="min-h-screen flex flex-col"
   >
     <section
-      ref="container2"
-      class="flex-grow flex flex-col justify-center text-center gap-y-2"
+      class="flex-grow
+        flex flex-col justify-center text-center items-center
+        gap-y-2 mt-32"
+
+      md="min-h-[50vh]"
+      lg="gap-y-3"
     >
       <h2
-        class="w-full font-medium text-xl"
+        class="font-medium text-xl"
+        lg="text-2xl"
       >
         {{ $t('contact.title') }}
       </h2>
       <a
         v-for="detail in $tm('contact.details')" :key="`contact_${$rt(detail.title)}`"
-        :href="$rt(detail.link)" class="w-full block text-lg"
+        :href="$rt(detail.link)"
+        class="text-lg"
+        lg="text-xl"
       >
         <span class="underline">
           {{ $rt(detail.title) }}
@@ -66,11 +74,16 @@ onMounted(() => {
         :key="`arrow_${index}`" ref="arrows"
         href="#hero"
         class="inline-block text-stroke-1 text-stroke-jo_dark text-transparent text-[34vw] font-display leading-none"
+        md="text-[30vw]"
+        lg="text-[32vw] "
       >
         ↑
       </a>
     </div>
-    <footer class="text-[2.9vw] font-extralight text-center mb-4">
+    <footer
+      class="text-[2.9vw] font-extralight text-center mb-4"
+      lg="text-3xl"
+    >
       {{ $t('footer') }}
       <JoImprint />
     </footer>
