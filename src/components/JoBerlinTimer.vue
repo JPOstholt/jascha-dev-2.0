@@ -16,6 +16,7 @@ const time = computed(() => date.value.toLocaleString('de-DE', {
     tag="p"
     class="jo_text_sm font-sans tracking-wide -mr-1
       min-w-[7.7em]"
+    lg="-mr-2.5"
   >
     <template #time>
       <span class="font-display">{{ time }}</span>
