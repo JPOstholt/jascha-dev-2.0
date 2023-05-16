@@ -56,6 +56,6 @@ export default defineConfig({
   ],
   ssr: {
     // SSG Vue-i18n workaround
-    noExternal: [/vue-i18n/],
+    noExternal: [/vue-i18n/, 'gsap'],
   },
 })

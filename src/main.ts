@@ -1,6 +1,7 @@
 import { ViteSSG } from 'vite-ssg/single-page'
 
-import { SplitText, gsap } from 'gsap/all'
+import { gsap } from 'gsap'
+import { SplitText } from 'gsap/SplitText'
 
 import App from './App.vue'
 
@@ -10,10 +11,11 @@ import 'uno.css'
 
 import i18n from './modules/i18n'
 
-// gsap
-gsap.registerPlugin(ScrollTrigger)
-gsap.registerPlugin(SplitText)
-
-export const createApp = ViteSSG(App, ({ app }) => {
+export const createApp = ViteSSG(App, ({ app, isClient }) => {
   app.use(i18n)
+
+  if (isClient) {
+    gsap.registerPlugin(SplitText)
+    gsap.registerPlugin(ScrollTrigger)
+  }
 })
