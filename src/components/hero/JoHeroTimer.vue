@@ -13,6 +13,7 @@ const time = computed(() => date.value.toLocaleString('de-DE', {
 <template>
   <i18n-t
     keypath="timer"
+    scope="global"
     tag="p"
     class="jo_text_sm font-sans tracking-wide -mr-1
       min-w-[7.7em]"
