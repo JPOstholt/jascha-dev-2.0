@@ -26,7 +26,7 @@
         <JoHeroTimer />
       </div>
     </section>
-    <a :href="`#${$t('nav[0].id')}`" class="block self-center text-center font-display text-stroke-1 text-[8.5vw] 2xl:text-[9rem] leading-none z-10">
+    <a :href="`#${$t('nav[0].id')}`" class="block self-center text-center font-display text-stroke-1 text-[8.5vw] 2xl:text-[9rem] leading-none z-30">
       ↓
     </a>
   </div>

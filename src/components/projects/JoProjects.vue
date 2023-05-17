@@ -59,7 +59,7 @@ onMounted(() => {
         <div class="jo_border" />
       </template>
     </div>
-    <a :href="`#${$t('nav[2].id')}`" class="block self-center text-center text-[8.5vw] font-display">
+    <a :href="`#${$t('nav[2].id')}`" class="block self-center text-center font-display text-stroke-1 text-[8.5vw] 2xl:text-[9rem] leading-none z-30">
       ↓
     </a>
   </section>
