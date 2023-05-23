@@ -3,6 +3,7 @@ import { ViteSSG } from 'vite-ssg/single-page'
 import { gsap } from 'gsap'
 import { SplitText } from 'gsap/SplitText'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { MorphSVGPlugin } from 'gsap/MorphSVGPlugin'
 
 import App from './App.vue'
 
@@ -18,5 +19,6 @@ export const createApp = ViteSSG(App, ({ app, isClient }) => {
   if (isClient) {
     gsap.registerPlugin(SplitText)
     gsap.registerPlugin(ScrollTrigger)
+    gsap.registerPlugin(MorphSVGPlugin)
   }
 })

@@ -11,6 +11,7 @@ declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     JoAbout: typeof import('./src/components/about/JoAbout.vue')['default']
     JoAboutAccordeon: typeof import('./src/components/about/JoAboutAccordeon.vue')['default']
+    JoArrowDown: typeof import('./src/components/JoArrowDown.vue')['default']
     JoContact: typeof import('./src/components/contact/JoContact.vue')['default']
     JoHero: typeof import('./src/components/hero/JoHero.vue')['default']
     JoHeroHeading: typeof import('./src/components/hero/JoHeroHeading.vue')['default']
