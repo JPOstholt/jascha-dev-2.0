@@ -60,13 +60,15 @@ onMounted(() => {
         v-for="detail in $tm('contact.details')"
         :key="`contact_${$rt(detail.title)}`"
         :href="$rt(detail.link)"
-        class="text-lg"
+        class="text-lg tracking-wider hover:tracking-widest transition-all duration-400"
         lg="text-xl"
       >
-        <span class="underline">
+        <span class="border-b-2 border-jo_dark pb-1">
           {{ $rt(detail.title) }}
         </span>
-        <span class="inline-block underline transfrom rotate-270 font-display ml-1">↓</span>
+        <span class="inline-block font-display ml-2">
+          →
+        </span>
       </a>
     </section>
     <div class="w-full text-center">
