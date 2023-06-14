@@ -31,7 +31,7 @@ const linkText = ref(null)
 let chars: Element[]
 onMounted(() => {
   // adding the !block class ensures the linebreak in 'recent projects'
-  const split = new SplitText(linkText.value, { type: 'chars' })
+  const split = new SplitText(linkText.value, { type: 'chars,words', wordsClass: 'mr-4' })
   chars = split.chars
 })
 
@@ -45,6 +45,7 @@ const hoverHandlers = {
     }
 
     hoverAnimation = gsap.to(chars, {
+      fontFamily: 'CM Geom',
       color: 'transparent',
       textStrokeWidth: '1px',
       marginRight: '4px',
@@ -67,7 +68,7 @@ const hoverHandlers = {
     target="_blank"
     v-on="hoverHandlers"
   >
-    <span ref="linkText">
+    <span ref="linkText" class="inline-block h-30 flex items-center">
       <slot />
     </span>
   </a>

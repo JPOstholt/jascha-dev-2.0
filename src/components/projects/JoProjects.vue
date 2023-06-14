@@ -1,7 +1,7 @@
 <template>
   <section
     :id="$t('nav[1].id')"
-    class="py-8 flex flex-col justify-between min-h-screen space-y-20"
+    class="py-8 flex flex-col justify-between min-h-screen space-y-20 xl:space-y-36"
   >
     <header
       class="w-full mt-32"
