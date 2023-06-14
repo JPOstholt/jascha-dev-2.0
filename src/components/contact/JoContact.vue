@@ -60,7 +60,7 @@ onMounted(() => {
         v-for="detail in $tm('contact.details')"
         :key="`contact_${$rt(detail.title)}`"
         :href="$rt(detail.link)"
-        class="text-lg tracking-wider hover:tracking-widest transition-all duration-400"
+        class="text-lg tracking-wider hover:tracking-[0.15em] transition-all duration-400"
         lg="text-xl"
       >
         <span class="border-b-2 border-jo_dark pb-1">
