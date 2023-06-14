@@ -45,12 +45,11 @@ const hoverHandlers = {
     }
 
     hoverAnimation = gsap.to(chars, {
-      fontFamily: 'CM Geom',
       color: 'transparent',
       textStrokeWidth: '1px',
       marginRight: '4px',
-      duration: 0.01,
-      stagger: 0.02,
+      duration: 0.04,
+      stagger: 0.04,
     })
   },
   mouseleave: () => {
