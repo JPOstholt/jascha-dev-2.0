@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import gsap from 'gsap'
+import { SplitText, gsap } from 'gsap/all'
 
 defineProps<{
   href: string
@@ -24,18 +24,50 @@ onMounted(() => {
     })
   }
 })
+
+// hover
+const linkText = ref(null)
+
+let chars: Element[]
+onMounted(() => {
+  // adding the !block class ensures the linebreak in 'recent projects'
+  const split = new SplitText(linkText.value, { type: 'chars' })
+  chars = split.chars
+})
+
+let hoverAnimation: gsap.core.Tween
+
+const hoverHandlers = {
+  mouseenter: () => {
+    if (hoverAnimation) {
+      hoverAnimation.play()
+      return
+    }
+
+    hoverAnimation = gsap.to(chars, {
+      color: 'transparent',
+      textStrokeWidth: '1px',
+      marginRight: '4px',
+      duration: 0.01,
+      stagger: 0.02,
+    })
+  },
+  mouseleave: () => {
+    hoverAnimation!.reverse()
+  },
+}
 </script>
 
 <template>
   <a
     ref="projectTitle"
     :href="$rt(href)"
-    class="font-serif whitespace-nowrap
-            hover:text-transparent hover:text-stroke-1 hover:text-stroke-jo_dark transition-colors
+    class="font-serif whitespace-nowrap text-stroke-jo_dark
             text-7xl xl:text-8xl"
     target="_blank"
+    v-on="hoverHandlers"
   >
-    <span>
+    <span ref="linkText">
       <slot />
     </span>
   </a>
