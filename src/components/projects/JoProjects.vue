@@ -49,6 +49,7 @@ onMounted(() => {
           ref="projectTitles"
           :href="$rt(project.link)"
           class="font-serif whitespace-nowrap
+            hover:text-transparent hover:text-stroke-1 hover:text-stroke-jo_dark transition-colors
             text-7xl xl:text-8xl"
           target="_blank"
         >

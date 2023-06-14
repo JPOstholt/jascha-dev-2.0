@@ -1,7 +1,3 @@
-<script lang="ts" setup>
-
-</script>
-
 <template>
   <nav
     class="w-screen flex justify-between fixed top-0 left-0
