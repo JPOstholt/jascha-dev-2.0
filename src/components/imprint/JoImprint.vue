@@ -12,7 +12,9 @@ onClickOutside(imprintModal, () => imprintOpen.value = false)
     </button>
     <div
       v-if="imprintOpen"
-      class="absolute bottom-8 w-screen right-full mr-4 pb-4 px-4 border border-jo_dark bg-jo_beige z-50 max-h-[60vh] max-w-[80vw] overflow-y-scroll"
+      class="fixed left-8 right-8 bottom-16 pb-4 px-4
+        max-h-[60vh]
+        border border-jo_dark bg-jo_beige z-50 overflow-y-scroll"
     >
       <button class="sticky text-left pt-4 pb-1 top-0 w-full bg-jo_beige" @click="imprintOpen = false">
         X
