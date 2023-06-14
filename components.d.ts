@@ -21,6 +21,7 @@ declare module '@vue/runtime-core' {
     JoImprintPrivacy: typeof import('./src/components/imprint/JoImprintPrivacy.vue')['default']
     JoNavigation: typeof import('./src/components/navigation/JoNavigation.vue')['default']
     JoNavigationItem: typeof import('./src/components/navigation/JoNavigationItem.vue')['default']
+    JoProjectListItem: typeof import('./src/components/projects/JoProjectListItem.vue')['default']
     JoProjects: typeof import('./src/components/projects/JoProjects.vue')['default']
   }
 }

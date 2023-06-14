@@ -25,7 +25,7 @@ onMounted(() => {
 // hover
 let chars: Element[]
 onMounted(() => {
-  // adding the !block class makes ensures the linebreak in recent projects
+  // adding the !block class ensures the linebreak in 'recent projects'
   const split = new SplitText(linkText.value, { type: 'words,chars', wordsClass: '!block' })
   chars = split.chars
 })
