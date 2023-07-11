@@ -1,9 +1,10 @@
 <script lang="ts" setup>
-import gsap from 'gsap'
+import { SplitText, gsap } from 'gsap/all'
 
 // refs
 const arrow = ref(null)
 const content = ref(null)
+const linkText = ref(null)
 
 // get element height
 const { height } = useElementSize(content)
@@ -30,6 +31,61 @@ watch(isOpen, (value) => {
       rotateZ: value ? 180 : 0,
     }, 0)
 })
+
+// hover
+let chars: Element[]
+let isTouchDevice: boolean
+
+onMounted(() => {
+  isTouchDevice = !matchMedia('(pointer:fine)').matches
+
+  if (isTouchDevice)
+    return
+
+  const split = new SplitText(linkText.value, { type: 'chars' })
+  chars = split.chars
+})
+
+let hoverAnimation: gsap.core.Tween
+
+const mouseEnter = () => {
+  if (isTouchDevice)
+    return
+
+  gsap.to(arrow.value, {
+    rotateZ: 90,
+  })
+
+  if (hoverAnimation) {
+    hoverAnimation.play()
+    return
+  }
+
+  hoverAnimation = gsap.to(chars, {
+    marginRight: '1px',
+    fontStyle: 'italic',
+    duration: 0.2,
+    stagger: 0.04,
+  })
+}
+
+const mouseLeave = () => {
+  if (isTouchDevice)
+    return
+
+  if (isOpen.value) {
+    gsap.to(arrow.value, {
+      rotateZ: 180,
+    })
+    return
+  }
+
+  hoverAnimation!.reverse()
+
+  gsap.to(arrow.value, {
+    rotateZ: 0,
+  })
+}
 </script>
 
 <template>
@@ -39,8 +95,13 @@ watch(isOpen, (value) => {
         lg:mb-1
         xl:mb-2"
     >
-      <div class="w-full flex justify-between px-4 cursor-pointer" @click="toggleOpen()">
+      <div
+        class="w-full flex justify-between px-4 cursor-pointer hover:opacity-80"
+        @click="toggleOpen()"
+        @mouseenter="mouseEnter()" @mouseleave="mouseLeave()"
+      >
         <h3
+          ref="linkText"
           class="lowercase jo_text_base tracking-widest"
         >
           <slot name="title" />
