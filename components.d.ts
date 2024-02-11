@@ -13,6 +13,7 @@ declare module '@vue/runtime-core' {
     JoAboutAccordeon: typeof import('./src/components/about/JoAboutAccordeon.vue')['default']
     JoArrowDown: typeof import('./src/components/JoArrowDown.vue')['default']
     JoContact: typeof import('./src/components/contact/JoContact.vue')['default']
+    JoCursor: typeof import('./src/components/JoCursor.vue')['default']
     JoHero: typeof import('./src/components/hero/JoHero.vue')['default']
     JoHeroHeading: typeof import('./src/components/hero/JoHeroHeading.vue')['default']
     JoHeroTimer: typeof import('./src/components/hero/JoHeroTimer.vue')['default']

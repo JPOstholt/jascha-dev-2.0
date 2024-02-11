@@ -15,6 +15,7 @@ useHead({
 
 <template>
   <div>
+    <JoCursor />
     <JoNavigation />
     <main
       class="px-4
