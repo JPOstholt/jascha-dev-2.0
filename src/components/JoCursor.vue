@@ -2,13 +2,14 @@
 import { gsap } from 'gsap/all'
 
 onMounted(() => {
-  const xTo = gsap.quickTo('#custom-cursor', 'x', {
-    duration: 0.2,
-  })
+  const followAnimation = {
+    duration: 0.5,
+    ease: 'power1.out',
+  }
 
-  const yTo = gsap.quickTo('#custom-cursor', 'y', {
-    duration: 0.2,
-  })
+  const xTo = gsap.quickTo('#custom-cursor', 'x', followAnimation)
+
+  const yTo = gsap.quickTo('#custom-cursor', 'y', followAnimation)
 
   const pulsate = gsap.to('#custom-cursor', {
     rotate: 360,
