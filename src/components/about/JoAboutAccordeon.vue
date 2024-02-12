@@ -96,7 +96,7 @@ const mouseLeave = () => {
         xl:mb-2"
     >
       <div
-        class="w-full flex justify-between px-4 cursor-pointer hover:opacity-80"
+        class="w-full flex justify-between px-4 hover:opacity-80 cursor-hover-target"
         @click="toggleOpen()"
         @mouseenter="mouseEnter()" @mouseleave="mouseLeave()"
       >

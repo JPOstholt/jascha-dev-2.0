@@ -60,7 +60,7 @@ onMounted(() => {
         v-for="detail in $tm('contact.details')"
         :key="`contact_${$rt(detail.title)}`"
         :href="$rt(detail.link)"
-        class="text-lg tracking-wider hover:tracking-[0.15em] transition-all duration-400"
+        class="text-lg tracking-wider hover:tracking-[0.15em] transition-all duration-400 cursor-hover-target"
         lg="text-xl"
       >
         <span class="border-b-2 border-jo_dark pb-1">
@@ -77,7 +77,7 @@ onMounted(() => {
         :key="`arrow_${index}`" ref="arrows"
         href="#hero"
         class="inline-block text-stroke-1 text-stroke-jo_dark text-transparent font-display leading-none
-        text-[34vw] md:text-[30vw] lg:text-[31vw] 4xl:text-[28vw]"
+        text-[34vw] md:text-[30vw] lg:text-[31vw] 4xl:text-[28vw] cursor-hover-target"
       >
         ↑
       </a>

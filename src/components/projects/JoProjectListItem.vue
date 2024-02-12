@@ -62,7 +62,7 @@ const hoverHandlers = {
   <a
     ref="projectTitle"
     :href="$rt(href)"
-    class="font-serif whitespace-nowrap text-stroke-jo_dark
+    class="font-serif whitespace-nowrap text-stroke-jo_dark cursor-hover-target
             text-7xl xl:text-8xl"
     target="_blank"
     v-on="hoverHandlers"

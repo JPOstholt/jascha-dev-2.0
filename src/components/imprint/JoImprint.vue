@@ -7,7 +7,7 @@ onClickOutside(imprintModal, () => imprintOpen.value = false)
 
 <template>
   <aside class="relative inline-block">
-    <button class="inline-block underline hover:no-underline" @click="imprintOpen = !imprintOpen">
+    <button class="inline-block underline hover:no-underline cursor-hover-target" @click="imprintOpen = !imprintOpen">
       {{ $t('imprint') }}
     </button>
     <div

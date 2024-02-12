@@ -54,7 +54,7 @@ const mouseLeave = () => {
   <a
     ref="link"
     :href="`#${$rt(id)}`"
-    class="jo_text_base leading-tight lg:font-normal tracking-widest relative"
+    class="jo_text_base leading-tight lg:font-normal tracking-widest relative cursor-hover-target"
     @mouseenter="mouseEnter()" @mouseleave="mouseLeave()"
   >
     <span ref="linkText">

@@ -23,7 +23,7 @@ const hoverAnimation = () => {
 <template>
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    class="overflow-visible origin-center"
+    class="overflow-visible origin-center cursor-hover-target"
     fill="none" viewBox="0 0 65 93" @mouseenter="hoverAnimation" @mouseleave="tween.reverse()"
   >
     <path ref="start" fill="currentColor" stroke="currentColor" d="m31 93-7.26-9.24L.64 58.152v-.66h9.636L22.024 70.56l5.412 8.052h.66V.6h8.58v77.88h.66l5.28-7.92 11.88-13.068h9.636v.66l-23.1 25.608-7.26 9.24H31Z" />
