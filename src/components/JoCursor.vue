@@ -17,7 +17,7 @@ onMounted(() => {
   })
 
   const scale = gsap.to('#custom-cursor', {
-    scale: 2,
+    scale: 2.5,
     duration: 0.2,
   })
 
@@ -41,7 +41,7 @@ onMounted(() => {
 
 <template>
   <div id="custom-cursor" class="fixed pointer-events-none">
-    <div class="cursor border-jo_beige border-4 border-outset bg-jo_dark" style="" />
+    <div class="cursor border-jo_beige border-4 border-outset bg-jo_dark/90" />
   </div>
 </template>
 
