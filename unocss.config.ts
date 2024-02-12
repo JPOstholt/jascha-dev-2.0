@@ -41,11 +41,8 @@ export default defineConfig({
       '4xl': '2400px',
     },
     colors: {
-      jo_green: '#82887C',
       jo_dark: '#403D39',
       jo_beige: '#E1DDD6',
-      jo_brown: '#884125',
-      jo_grey: '#C1BDB9',
     },
     fontFamily: {
       display: ['CMGeom', 'sans-serif'],
