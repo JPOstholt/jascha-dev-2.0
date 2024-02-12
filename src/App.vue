@@ -11,11 +11,13 @@ useHead({
     },
   ],
 })
+
+const hasMouse = useMediaQuery('(pointer:fine)')
 </script>
 
 <template>
   <div>
-    <JoCursor />
+    <JoCursor v-if="hasMouse" />
     <JoNavigation />
     <main
       class="px-4
