@@ -3,20 +3,22 @@ import { gsap } from 'gsap/all'
 
 onMounted(() => {
   const followAnimation = {
-    duration: 0.5,
+    duration: 0.4,
     ease: 'power1.out',
   }
-
   const xTo = gsap.quickTo('#custom-cursor', 'x', followAnimation)
-
   const yTo = gsap.quickTo('#custom-cursor', 'y', followAnimation)
 
-  const pulsate = gsap.to('#custom-cursor', {
+  const rotate = gsap.to('#custom-cursor', {
     rotate: 360,
-    duration: 1,
+    duration: 0.9,
     repeat: -1,
     ease: 'none',
-    paused: true,
+  })
+
+  const scale = gsap.to('#custom-cursor', {
+    scale: 2,
+    duration: 0.2,
   })
 
   document.addEventListener('mousemove', (e: MouseEvent) => {
@@ -26,18 +28,12 @@ onMounted(() => {
     const pointedElement = document.elementFromPoint(e.clientX, e.clientY)
 
     if (pointedElement?.closest('.cursor-hover-target')) {
-      pulsate.play()
-      gsap.to('#custom-cursor', {
-        scale: 2,
-        duration: 0.2,
-      })
+      rotate.timeScale(1)
+      scale.play()
     }
     else {
-      pulsate.pause()
-      gsap.to('#custom-cursor', {
-        scale: 1,
-        duration: 0.2,
-      })
+      rotate.timeScale(0.5)
+      scale.reverse()
     }
   })
 })
