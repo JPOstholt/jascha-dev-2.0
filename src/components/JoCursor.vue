@@ -2,6 +2,8 @@
 import { gsap } from 'gsap/all'
 
 onMounted(() => {
+  gsap.set('#custom-cursor', { x: window.innerWidth / 2, y: window.innerHeight / 2 })
+
   const followAnimation = {
     duration: 0.4,
     ease: 'power1.out',
