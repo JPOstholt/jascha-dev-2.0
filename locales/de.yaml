@@ -47,12 +47,16 @@ projects:
   title: Recent Projects
   subtitle: (2016 - today)
   projects:
-    - title: elvah
-      link: http://www.elvah.de
-    - title: kreait (offline)
-      link: http://www.kreait.com
+    - title: Voltarium (for C4 - WIP)
+      link: https://www.c4berlin.de/gsg-voltarium
     - title: Dominik Galleya
       link: http://dominikgalleya.at
+    - title: elvah
+      link: http://www.elvah.de
+    - title: Peter Lénne
+      link: https://peter-lenne-schule.de/
+    - title: kreait (offline)
+      link: http://www.kreait.com
     - title: olaph (offline)
       link: http://olaph.io
 contact:
