@@ -113,7 +113,7 @@ const mouseLeave = () => {
     </div>
     <div
       ref="content"
-      class="px-4 overflow-hidden jo_text_base font-light"
+      class="px-4 overflow-hidden jo_text_base font-extralight"
     >
       <div
         class="mt-2

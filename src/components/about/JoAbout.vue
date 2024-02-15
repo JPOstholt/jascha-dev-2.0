@@ -46,6 +46,17 @@
                 </td>
               </tr>
             </template>
+            <template v-else-if="$rt(detail.title) === 'Stack'">
+              <p>
+                {{ $rt(detail.description.main) }}
+              </p>
+              <h4 class="mt-4 italic">
+                I have also worked with:
+              </h4>
+              <p>
+                {{ $rt(detail.description.also) }}
+              </p>
+            </template>
             <a
               v-else-if="$rt(detail.title) === 'Downloads'"
               href="/downloads/CV_JaschaOstholt.pdf"

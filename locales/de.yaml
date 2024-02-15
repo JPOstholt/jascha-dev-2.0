@@ -29,7 +29,9 @@ about:
   details:
     stack:
       title: Stack
-      description: Nuxt, Vue, Typescript, Tailwind, GSAP, Three
+      description:
+        main: Nuxt, Vue, Typescript, Tailwind, GSAP, Three.js
+        also: Kotlin, Java (Spring), MongoDB, SQL, Docker
     languages:
       title: Languages
       description: German, English
