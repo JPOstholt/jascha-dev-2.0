@@ -5,7 +5,7 @@ onMounted(() => {
   gsap.set('#custom-cursor', { x: window.innerWidth / 2, y: window.innerHeight / 2 })
 
   const followAnimation = {
-    duration: 0.4,
+    duration: 0.2,
     ease: 'power1.out',
   }
   const xTo = gsap.quickTo('#custom-cursor', 'x', followAnimation)
