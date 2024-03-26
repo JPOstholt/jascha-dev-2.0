@@ -95,7 +95,7 @@ const mouseLeave = () => {
         lg:mb-1
         xl:mb-2"
     >
-      <div
+      <button
         class="w-full flex justify-between px-4 hover:opacity-80 cursor-hover-target"
         @click="toggleOpen()"
         @mouseenter="mouseEnter()" @mouseleave="mouseLeave()"
@@ -106,10 +106,10 @@ const mouseLeave = () => {
         >
           <slot name="title" />
         </h3>
-        <button ref="arrow">
+        <div ref="arrow">
           ↓
-        </button>
-      </div>
+        </div>
+      </button>
     </div>
     <div
       ref="content"
